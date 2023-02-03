@@ -4,13 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-<<<<<<< Updated upstream
-  - base
+  - Floor
   - rootnode
   - explosion
-=======
-  - Floor
->>>>>>> Stashed changes
+  - base
   layers:
   - Default
   - TransparentFX

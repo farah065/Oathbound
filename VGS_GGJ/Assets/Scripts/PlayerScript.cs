@@ -58,4 +58,9 @@ public class PlayerScript : MonoBehaviour
         if(other.gameObject.tag == "Floor")
             grounded = false;
     }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.tag == "explosion")
+            enabled = false;
+    }
 }
