@@ -311,7 +311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc4cbb8c1ad00034482784aef588c04f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  genDistance: 2
+  genDistance: 1.4
   rootext: {fileID: 5171858912367433204, guid: 75b89104ff8c1294e91d9aa9ca379665, type: 3}
   explodefab: {fileID: 3726460772320338225, guid: fc3bd114caf71e540afa01664bdee4f3, type: 3}
-  exptime: 1
+  exptime: 0.6

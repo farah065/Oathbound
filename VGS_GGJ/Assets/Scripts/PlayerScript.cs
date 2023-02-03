@@ -9,6 +9,8 @@ public class PlayerScript : MonoBehaviour
     public float jumpSpeed = 3;
     public bool grounded = true;
     public Rigidbody2D playerbody;
+    public rootgenscript rgn;
+    public dooropenscript dors;
     // Start is called before the first frame update
     void Start()
     {
@@ -62,5 +64,14 @@ public class PlayerScript : MonoBehaviour
     {
         if(other.gameObject.tag == "explosion")
             enabled = false;
+        if (other.gameObject.tag == "skullkey")
+        {
+            rgn.enraged = true;
+            dors.open = true;
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.tag == "door")
+            playerbody.velocity = new Vector2(playerbody.velocity.x, 40);
+
     }
 }

@@ -9,7 +9,7 @@ public class rootgenscript : MonoBehaviour
     public GameObject rootext;
     public GameObject explodefab;
     Queue<GameObject> nodes = new Queue<GameObject>();
-    bool enraged = false;
+    public bool enraged = false;
     bool exploding;
     public float exptime;
     GameObject curr;
@@ -24,22 +24,26 @@ public class rootgenscript : MonoBehaviour
     void FixedUpdate()
     {
         Transform playerLocation = GetComponent<Transform>();
-        float xdiff = playerLocation.position.x - lastpoint.position.x;
-        float ydiff = playerLocation.position.y - lastpoint.position.y;
-        if(genDistance*genDistance < (xdiff * xdiff) + (ydiff * ydiff))
+        if (!(enraged && nodes.Count == 0))
         {
-            float midx = (playerLocation.position.x + lastpoint.position.x) / 2;
-            float midy = (playerLocation.position.y + lastpoint.position.y) / 2;
-            float angle = Mathf.Rad2Deg * Mathf.Atan2(ydiff, xdiff);
-            Vector3 pos = new Vector3(midx, midy, 0);
-            curr = Instantiate(rootext, pos, Quaternion.Euler(0, 0, angle));
-            lastpoint = curr.transform.GetChild(0);
-            nodes.Enqueue(curr);
-        }
-        if (enraged && !exploding)
-        {
-            exploding = true;
-            StartCoroutine(explode());
+            float xdiff = playerLocation.position.x - lastpoint.position.x;
+            float ydiff = playerLocation.position.y - lastpoint.position.y;
+            if (genDistance * genDistance < (xdiff * xdiff) + (ydiff * ydiff))
+            {
+                float midx = (playerLocation.position.x + lastpoint.position.x) / 2;
+                float midy = (playerLocation.position.y + lastpoint.position.y) / 2;
+                float angle = Mathf.Rad2Deg * Mathf.Atan2(ydiff, xdiff);
+                Vector3 pos = new Vector3(midx, midy, 0);
+                curr = Instantiate(rootext, pos, Quaternion.Euler(0, 0, angle));
+                lastpoint = curr.transform.GetChild(0);
+                nodes.Enqueue(curr);
+            }
+
+            if (enraged && !exploding)
+            {
+                exploding = true;
+                StartCoroutine(explode());
+            }
         }
     }
     IEnumerator explode()
