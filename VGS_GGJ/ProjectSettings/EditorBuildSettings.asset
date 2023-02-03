@@ -5,8 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/BuildScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  m_configObjects:
-    com.unity.input.settings: {fileID: 11400000, guid: 7bff56db5a31eb345a5ba555dd18b53e, type: 2}
+  - enabled: 1
+    path: Assets/Scenes/Farah/Main Menu.unity
+    guid: 7a5694c0c343b764db3651ec10c79b7f
+  - enabled: 1
+    path: Assets/Scenes/Farah/Settings.unity
+    guid: 0a8207da135f2864a8bca707f789808b
+  m_configObjects: {}
