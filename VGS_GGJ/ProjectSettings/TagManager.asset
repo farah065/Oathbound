@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - base
+  - rootnode
+  - explosion
   layers:
   - Default
   - TransparentFX
