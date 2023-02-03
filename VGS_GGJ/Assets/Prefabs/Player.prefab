@@ -153,6 +153,8 @@ MonoBehaviour:
   jumpSpeed: 3
   grounded: 0
   playerbody: {fileID: 746464676714831023}
+  rgn: {fileID: 7954858405786661734}
+  dors: {fileID: 8943160710996262633, guid: 7660286e12556c74885ed4b96ccf3032, type: 3}
   moveAction:
     m_Name: Move
     m_Type: 0
@@ -314,4 +316,5 @@ MonoBehaviour:
   genDistance: 1.4
   rootext: {fileID: 5171858912367433204, guid: 75b89104ff8c1294e91d9aa9ca379665, type: 3}
   explodefab: {fileID: 3726460772320338225, guid: fc3bd114caf71e540afa01664bdee4f3, type: 3}
+  enraged: 0
   exptime: 0.6

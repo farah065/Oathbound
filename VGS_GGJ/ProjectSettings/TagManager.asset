@@ -8,6 +8,10 @@ TagManager:
   - rootnode
   - explosion
   - base
+  - skullkey
+  - door
+  - enemy
+  - trap
   layers:
   - Default
   - TransparentFX
