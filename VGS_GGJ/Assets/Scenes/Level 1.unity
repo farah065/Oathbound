@@ -2619,6 +2619,14 @@ PrefabInstance:
       propertyPath: anim
       value: 
       objectReference: {fileID: 1183280635}
+    - target: {fileID: 7954858405786661734, guid: 1545a5e5115aaee499485e82cd0f9171, type: 3}
+      propertyPath: exptime
+      value: 0.345
+      objectReference: {fileID: 0}
+    - target: {fileID: 7954858405786661734, guid: 1545a5e5115aaee499485e82cd0f9171, type: 3}
+      propertyPath: genDistance
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 9069435458416036586, guid: 1545a5e5115aaee499485e82cd0f9171, type: 3}
       propertyPath: keySFX
       value: 
@@ -2631,14 +2639,6 @@ PrefabInstance:
       propertyPath: musicMixer
       value: 
       objectReference: {fileID: -4456513594453193818, guid: 8f2b8e771691ff94bbc0b9f7bc458336, type: 2}
-    - target: {fileID: 7954858405786661734, guid: 1545a5e5115aaee499485e82cd0f9171, type: 3}
-      propertyPath: exptime
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7954858405786661734, guid: 1545a5e5115aaee499485e82cd0f9171, type: 3}
-      propertyPath: genDistance
-      value: 0.3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1545a5e5115aaee499485e82cd0f9171, type: 3}
 --- !u!82 &2070312041 stripped

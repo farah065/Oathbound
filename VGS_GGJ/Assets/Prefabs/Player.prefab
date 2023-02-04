@@ -370,7 +370,7 @@ MonoBehaviour:
   rootext: {fileID: 5171858912367433204, guid: 821b069283777c847b32646402e5333f, type: 3}
   explodefab: {fileID: 3726460772320338225, guid: fc3bd114caf71e540afa01664bdee4f3, type: 3}
   enraged: 0
-  exptime: 0.069
+  exptime: 0.345
 --- !u!114 &8350001155601811009
 MonoBehaviour:
   m_ObjectHideFlags: 0

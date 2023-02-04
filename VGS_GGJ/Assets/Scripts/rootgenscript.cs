@@ -14,7 +14,7 @@ public class rootgenscript : MonoBehaviour
     public float exptime;
     GameObject curr;
     bool immune = false;
-    
+    int exindex = 0;
     void Awake()
     {
         GameObject baseloc = GameObject.FindGameObjectWithTag("base");
@@ -51,13 +51,19 @@ public class rootgenscript : MonoBehaviour
     }
     IEnumerator explode()
     {
+        exindex++;
         GameObject expnode = nodes.Dequeue();
         Transform locationofexp = expnode.transform;
-        GameObject expobj = Instantiate(explodefab, locationofexp.position, Quaternion.Euler(0,0,0));
+        GameObject expobj = null;
+        if (exindex % 5 == 0)  
+            expobj = Instantiate(explodefab, locationofexp.position, Quaternion.Euler(0,0,0));
         Destroy(expnode);
-        yield return new WaitForSeconds(exptime + SlowCorruption.curRate);
-        exptime *= 0.9f;
-        Destroy(expobj);
+        if (exindex % 5 == 0)
+        {
+            yield return new WaitForSeconds(exptime + SlowCorruption.curRate);
+            exptime *= 0.95f;
+            Destroy(expobj);
+        }
         exploding = false;
     }
     private void OnTriggerEnter2D(Collider2D collision)

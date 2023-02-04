@@ -2129,7 +2129,7 @@ PrefabInstance:
       objectReference: {fileID: 1183280635}
     - target: {fileID: 7954858405786661734, guid: 1545a5e5115aaee499485e82cd0f9171, type: 3}
       propertyPath: exptime
-      value: 0.069
+      value: 0.345
       objectReference: {fileID: 0}
     - target: {fileID: 7954858405786661734, guid: 1545a5e5115aaee499485e82cd0f9171, type: 3}
       propertyPath: genDistance
