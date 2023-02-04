@@ -12,7 +12,7 @@ public class MusicScript : MonoBehaviour
     public bool sfxPlayed;
 
     public AudioSource audioSource;
-    public AudioSource keySource;
+    public AudioSource audioSource2;
     public AudioMixerGroup sfxMixer;
     public AudioMixerGroup musicMixer;
 
@@ -59,10 +59,29 @@ public class MusicScript : MonoBehaviour
                     //audioSource.outputAudioMixerGroup = musicMixer;
                     playing = audioSource.isPlaying;
                     audioSource.clip = clips[5];
-                    audioSource.volume = 0.5f;
                 }
             }
             audioSource.Play();
+        }
+        if (PauseMenu.paused)
+        {
+            audioSource.pitch = 0.5f;
+            audioSource2.pitch = 0.5f;
+            audioSource2.volume = 0.5f;
+            if (!phase1)
+                audioSource.volume = 0.1f;
+            else
+                audioSource.volume = 0.5f;
+        }
+        else
+        {
+            audioSource.pitch = 1;
+            audioSource2.pitch = 1;
+            audioSource2.volume = 1f;
+            if (!phase1)
+                audioSource.volume = 0.5f;
+            else
+                audioSource.volume = 1;
         }
     }
 
