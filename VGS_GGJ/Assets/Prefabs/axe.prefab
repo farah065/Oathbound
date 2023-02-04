@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6363388883324198618}
   - component: {fileID: 6363388883324198621}
   - component: {fileID: 403943914778468289}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: axe blade
   m_TagString: trap
   m_Icon: {fileID: 0}
@@ -155,7 +155,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6363388883427778498}
   - component: {fileID: 6363388883427778499}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: axe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -240,7 +240,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6363388884693615488}
   - component: {fileID: 6363388884693615491}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: axis
   m_TagString: Untagged
   m_Icon: {fileID: 0}

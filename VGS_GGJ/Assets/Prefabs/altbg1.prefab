@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6082216548600969822}
   - component: {fileID: 6082216548600969821}
   - component: {fileID: 6082216548600969808}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: altbg1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
