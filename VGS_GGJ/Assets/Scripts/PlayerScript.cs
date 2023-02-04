@@ -20,6 +20,10 @@ public class PlayerScript : MonoBehaviour
     bool firststep = true;
     bool moving = false;
 
+    public int hp = 3;
+    public Renderer playerRen;
+    public bool invincible;
+
     public Animator anim;
 
     private Transform playerTR;
@@ -41,6 +45,7 @@ public class PlayerScript : MonoBehaviour
     {
         playerbody = gameObject.GetComponent<Rigidbody2D>();
         playerTR = gameObject.GetComponent<Transform>();
+        playerRen = gameObject.GetComponent<Renderer>();
     }
 
 
@@ -126,10 +131,10 @@ public class PlayerScript : MonoBehaviour
     {
         if(other.gameObject.tag == "explosion")
             killPlayer();
-        if (other.gameObject.tag == "enemy")
-            killPlayer();
-        if (other.gameObject.tag == "trap")
-            killPlayer();
+        if (other.gameObject.tag == "enemy" && !invincible)
+            StartCoroutine(hitTaken());
+        if (other.gameObject.tag == "trap" && !invincible)
+            StartCoroutine(hitTaken());
         if (other.gameObject.tag == "skullkey")
         {
             rgn.enraged = true;
@@ -155,5 +160,26 @@ public class PlayerScript : MonoBehaviour
         jumpSpeed *= 2;
         yield return new WaitForSeconds(5);
         jumpSpeed = tempjmp;
+    }
+
+    IEnumerator hitTaken()
+    {
+        hp--;
+        if (hp <= 0)
+        {
+            killPlayer();
+        }
+        else
+        {
+            invincible = true;
+            for (int i = 0; i < 3; i++)
+            {
+                playerRen.enabled = false;
+                yield return new WaitForSeconds(0.2f);
+                playerRen.enabled = true;
+                yield return new WaitForSeconds(0.2f);
+            }
+            invincible = false;
+        }
     }
 }
