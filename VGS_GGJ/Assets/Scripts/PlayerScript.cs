@@ -113,6 +113,8 @@ public class PlayerScript : MonoBehaviour
             enabled = false;
         if (other.gameObject.tag == "enemy")
             enabled = false;
+        if (other.gameObject.tag == "trap")
+            enabled = false;
         if (other.gameObject.tag == "skullkey")
         {
             rgn.enraged = true;

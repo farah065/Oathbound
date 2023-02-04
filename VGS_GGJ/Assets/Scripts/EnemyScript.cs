@@ -51,7 +51,7 @@ public class EnemyScript : MonoBehaviour
         else
             target = transform.position;
         */
-        float number_of_rays = 360;
+        float number_of_rays = 180;
         float angle = 360 / number_of_rays;
         float cast_angle = 0;
 
