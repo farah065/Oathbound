@@ -17,7 +17,7 @@ public class rootgenscript : MonoBehaviour
     void Awake()
     {
         GameObject baseloc = GameObject.FindGameObjectWithTag("base");
-        lastpoint = baseloc.transform;
+        lastpoint = baseloc.transform.GetChild(0);
     }
 
     // Update is called once per frame
