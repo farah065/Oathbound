@@ -84,7 +84,7 @@ public class Settings : MonoBehaviour
         master.SetFloat("sfxVolume", vol);
     }
 
-    public void ReturnToMenu()
+    public void BackToGame()
     {
         SceneManager.LoadScene("Main Menu");
     }

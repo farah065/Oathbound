@@ -14,5 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Farah/Settings.unity
     guid: 0a8207da135f2864a8bca707f789808b
+  - enabled: 1
+    path: Assets/Scenes/Farah/Farah.unity
+    guid: 334855a228ff41f4a83fc1a0a24313a2
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 7bff56db5a31eb345a5ba555dd18b53e, type: 2}
