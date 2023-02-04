@@ -98,7 +98,8 @@ public class MusicScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "skullkey")
         {
-            audioSource.Stop();
+            if(phase1)
+                audioSource.Stop();
             //audioSource.outputAudioMixerGroup = sfxMixer;
             phase1 = false;
         }
