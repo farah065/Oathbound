@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 746464676714831023}
   - component: {fileID: 746464676714831022}
   - component: {fileID: 7954858405786661734}
+  - component: {fileID: 8350001155601811009}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -151,8 +152,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   jumpSpeed: 3
-  grounded: 0
-  playerbody: {fileID: 746464676714831023}
   rgn: {fileID: 7954858405786661734}
   dors: {fileID: 8943160710996262633, guid: 7660286e12556c74885ed4b96ccf3032, type: 3}
   moveAction:
@@ -318,3 +317,17 @@ MonoBehaviour:
   explodefab: {fileID: 3726460772320338225, guid: fc3bd114caf71e540afa01664bdee4f3, type: 3}
   enraged: 0
   exptime: 0.6
+--- !u!114 &8350001155601811009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746464676714830993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f231a99e024bb141a0fdaeb4d4f0220, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slowRate: 0.2
+  duration: 2

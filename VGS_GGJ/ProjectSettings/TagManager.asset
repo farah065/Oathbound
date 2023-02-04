@@ -12,6 +12,7 @@ TagManager:
   - door
   - enemy
   - trap
+  - Power Up (SC)
   layers:
   - Default
   - TransparentFX

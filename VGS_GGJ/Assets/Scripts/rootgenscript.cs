@@ -52,7 +52,7 @@ public class rootgenscript : MonoBehaviour
         Transform locationofexp = expnode.transform;
         GameObject expobj = Instantiate(explodefab, locationofexp.position, Quaternion.Euler(0,0,0));
         Destroy(expnode);
-        yield return new WaitForSeconds(exptime);
+        yield return new WaitForSeconds(exptime + SlowCorruption.curRate);
         exptime *= 0.9f;
         Destroy(expobj);
         exploding = false;
