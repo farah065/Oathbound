@@ -113,6 +113,8 @@ public class PlayerScript : MonoBehaviour
             enabled = false;
         if (other.gameObject.tag == "enemy")
             enabled = false;
+        if (other.gameObject.tag == "trap")
+            enabled = false;
         if (other.gameObject.tag == "skullkey")
         {
             rgn.enraged = true;
@@ -122,6 +124,17 @@ public class PlayerScript : MonoBehaviour
         }
         if (other.gameObject.tag == "door")
             playerbody.velocity = new Vector2(playerbody.velocity.x, 40);
-
+        if(other.gameObject.tag == "Power Up (JMP)")
+        {
+            Destroy(other.gameObject);
+            StartCoroutine(Jmpboost());
+        }
+    }
+    IEnumerator Jmpboost()
+    {
+        float tempjmp = jumpSpeed;
+        jumpSpeed *= 2;
+        yield return new WaitForSeconds(5);
+        jumpSpeed = tempjmp;
     }
 }
