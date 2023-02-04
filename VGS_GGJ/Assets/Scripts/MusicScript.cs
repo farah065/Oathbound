@@ -17,8 +17,6 @@ public class MusicScript : MonoBehaviour
     public AudioMixerGroup musicMixer;
 
     public bool phase1;
-    public bool transition;
-    public bool first = true;
     public bool changed = false;
 
     public int i = 0;
@@ -51,19 +49,19 @@ public class MusicScript : MonoBehaviour
             {
                 if (!sfxPlayed)
                 {
-                    sfxPlayed = true;
                     audioSource.clip = keySFX;
-                    audioSource.Play();
+                    sfxPlayed = true;
+                    changed = true;
                 }
                 else
                 {
                     //audioSource.outputAudioMixerGroup = musicMixer;
-                    playing = audioSource.isPlaying;
                     audioSource.clip = clips[5];
                 }
             }
             audioSource.Play();
         }
+
         if (PauseMenu.paused)
         {
             audioSource.pitch = 0.5f;
@@ -98,10 +96,13 @@ public class MusicScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "skullkey")
         {
-            if(phase1)
+            if (phase1)
+            {
+                sfxPlayed = false;
                 audioSource.Stop();
+                phase1 = false;
+            }
             //audioSource.outputAudioMixerGroup = sfxMixer;
-            phase1 = false;
         }
     }
 }
