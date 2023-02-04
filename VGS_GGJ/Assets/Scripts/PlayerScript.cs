@@ -39,6 +39,10 @@ public class PlayerScript : MonoBehaviour
             moving = true;
         else
             moving = false;
+        if(!moving || !grounded)
+        {
+            footsteps.Stop();
+        }
         move(moveActionValue);
         if (jumpAction.triggered && grounded)
             jump();
@@ -99,8 +103,10 @@ public class PlayerScript : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.tag == "Floor")
+        if (other.gameObject.tag == "Floor")
+        {
             grounded = true;
+        }
     }
     void OnCollisionExit2D(Collision2D other)
     {
