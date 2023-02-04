@@ -557,7 +557,7 @@ GameObject:
   - component: {fileID: 1238057296}
   m_Layer: 0
   m_Name: Tilemap
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1986,7 +1986,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1791309365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2115,6 +2115,14 @@ PrefabInstance:
       propertyPath: dors
       value: 
       objectReference: {fileID: 85526484}
+    - target: {fileID: 746464676714831022, guid: 1545a5e5115aaee499485e82cd0f9171, type: 3}
+      propertyPath: leftstep
+      value: 
+      objectReference: {fileID: 8300000, guid: 93796243ffb3aa44ab70c5cb4ba75db4, type: 3}
+    - target: {fileID: 746464676714831022, guid: 1545a5e5115aaee499485e82cd0f9171, type: 3}
+      propertyPath: rightstep
+      value: 
+      objectReference: {fileID: 8300000, guid: 80549e604973da6468f8b33c9eae4689, type: 3}
     - target: {fileID: 7954858405786661734, guid: 1545a5e5115aaee499485e82cd0f9171, type: 3}
       propertyPath: anim
       value: 
