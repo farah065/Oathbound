@@ -15,7 +15,7 @@ public class rootgenscript : MonoBehaviour
     GameObject curr;
     bool immune = false;
     int exindex = 0;
-
+    float xdiff;
     public static bool changeMusic = false;
     void Awake()
     {
@@ -29,7 +29,7 @@ public class rootgenscript : MonoBehaviour
         Transform playerLocation = GetComponent<Transform>();
         if (!(enraged && nodes.Count == 0))
         {
-            float xdiff = playerLocation.position.x - lastpoint.position.x;
+            xdiff = playerLocation.position.x - lastpoint.position.x;
             float ydiff = playerLocation.position.y - 0.7f - lastpoint.position.y;
             if (genDistance * genDistance < (xdiff * xdiff) + (ydiff * ydiff))
             {
@@ -49,7 +49,7 @@ public class rootgenscript : MonoBehaviour
                 StartCoroutine(explode());
             }
         }
-        if (GetComponent<Rigidbody2D>().velocity.y < -1)
+        if (Mathf.Abs(GetComponent<Rigidbody2D>().velocity.y) > 0.2f)
             StartCoroutine(getImmune());
     }
     IEnumerator explode()
@@ -71,7 +71,7 @@ public class rootgenscript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("rootnode") && collision.gameObject != curr && !immune)
+        if (collision.gameObject.CompareTag("rootnode") && collision.gameObject != curr && !immune &&  xdiff < 1)
         {
             enraged = true;
         }
