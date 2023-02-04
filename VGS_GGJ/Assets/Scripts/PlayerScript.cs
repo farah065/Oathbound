@@ -146,6 +146,7 @@ public class PlayerScript : MonoBehaviour
         {
             transform.position = other.transform.position;
             playerbody.velocity = new Vector2(0, 0);
+            dors.close = true;
             enabled = false;
         }
         if(other.gameObject.tag == "Power Up (JMP)")
