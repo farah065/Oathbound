@@ -120,7 +120,7 @@ public class PlayerScript : MonoBehaviour
             rgn.enraged = true;
             dors.open = true;
             Destroy(other.gameObject);
-            keysfx.PlayOneShot(keygrab);
+            //keysfx.PlayOneShot(keygrab);
         }
         if (other.gameObject.tag == "door")
             playerbody.velocity = new Vector2(playerbody.velocity.x, 40);

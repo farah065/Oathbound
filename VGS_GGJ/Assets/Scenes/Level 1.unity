@@ -2535,6 +2535,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1598334722531688882, guid: 1545a5e5115aaee499485e82cd0f9171, type: 3}
+      propertyPath: Priority
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 746464676714830993, guid: 1545a5e5115aaee499485e82cd0f9171, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2607,10 +2611,26 @@ PrefabInstance:
       propertyPath: jumpSpeed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1786984774104192927, guid: 1545a5e5115aaee499485e82cd0f9171, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7954858405786661734, guid: 1545a5e5115aaee499485e82cd0f9171, type: 3}
       propertyPath: anim
       value: 
       objectReference: {fileID: 1183280635}
+    - target: {fileID: 9069435458416036586, guid: 1545a5e5115aaee499485e82cd0f9171, type: 3}
+      propertyPath: keySFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 09da14d1680dd4746b76fdcf0b514fe3, type: 3}
+    - target: {fileID: 9069435458416036586, guid: 1545a5e5115aaee499485e82cd0f9171, type: 3}
+      propertyPath: sfxMixer
+      value: 
+      objectReference: {fileID: -1738650314484988452, guid: 8f2b8e771691ff94bbc0b9f7bc458336, type: 2}
+    - target: {fileID: 9069435458416036586, guid: 1545a5e5115aaee499485e82cd0f9171, type: 3}
+      propertyPath: musicMixer
+      value: 
+      objectReference: {fileID: -4456513594453193818, guid: 8f2b8e771691ff94bbc0b9f7bc458336, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1545a5e5115aaee499485e82cd0f9171, type: 3}
 --- !u!82 &2070312041 stripped
