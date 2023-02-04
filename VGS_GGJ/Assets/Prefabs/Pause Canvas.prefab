@@ -734,6 +734,7 @@ GameObject:
   - component: {fileID: 1559243653513517084}
   - component: {fileID: 1559243653513517083}
   - component: {fileID: 1559243653513517082}
+  - component: {fileID: 4434918527615144001}
   m_Layer: 5
   m_Name: Pause Canvas
   m_TagString: Untagged
@@ -835,5 +836,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87283357c686dc6459de2985c495dc18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  music: {fileID: -1598334722531688882, guid: 1545a5e5115aaee499485e82cd0f9171, type: 3}
-  sfx: {fileID: -1598334722531688882, guid: 1545a5e5115aaee499485e82cd0f9171, type: 3}
+--- !u!114 &4434918527615144001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559243653513517081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 2a29c7a3b352b0641a9c7bcf801aef06, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ec9f3bdf-bd0e-4747-bcc5-9af928da0d2e
+    m_ActionName: PlayerMovement/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7cf21650-b44e-4526-9ae8-b38771dc093e
+    m_ActionName: PlayerMovement/Move[/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2ca8cce5-61eb-4d13-871c-e653f5ec1aad
+    m_ActionName: PauseMenu/Pause[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 43fe1997-de3c-4528-872d-92e43b8727cc
+    m_ActionName: PauseMenu/Restart[/Keyboard/r]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: PauseMenu
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
