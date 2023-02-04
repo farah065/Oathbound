@@ -143,7 +143,12 @@ public class PlayerScript : MonoBehaviour
             //keysfx.PlayOneShot(keygrab);
         }
         if (other.gameObject.tag == "door")
-            playerbody.velocity = new Vector2(playerbody.velocity.x, 40);
+        {
+            transform.position = other.transform.position;
+            playerbody.velocity = new Vector2(0, 0);
+            dors.close = true;
+            enabled = false;
+        }
         if(other.gameObject.tag == "Power Up (JMP)")
         {
             Destroy(other.gameObject);
