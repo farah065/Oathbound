@@ -180,6 +180,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7660286e12556c74885ed4b96ccf3032, type: 3}
+--- !u!114 &85526484 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8943160710996262633, guid: 7660286e12556c74885ed4b96ccf3032, type: 3}
+  m_PrefabInstance: {fileID: 85526483}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a789c7337c4bfa4eab48843f15a3517, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &164419621
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -257,7 +268,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8310884238240299673, guid: 05e9cb0d0b2d82e4ca1304c3bb23d304, type: 3}
       propertyPath: m_Name
-      value: background (1)
+      value: background left
       objectReference: {fileID: 0}
     - target: {fileID: 8310884238240299677, guid: 05e9cb0d0b2d82e4ca1304c3bb23d304, type: 3}
       propertyPath: m_RootOrder
@@ -363,7 +374,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8310884238240299673, guid: 05e9cb0d0b2d82e4ca1304c3bb23d304, type: 3}
       propertyPath: m_Name
-      value: background (2)
+      value: background right
       objectReference: {fileID: 0}
     - target: {fileID: 8310884238240299677, guid: 05e9cb0d0b2d82e4ca1304c3bb23d304, type: 3}
       propertyPath: m_RootOrder
@@ -744,6 +755,10 @@ PrefabInstance:
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[34].y
       value: -0.39312705
       objectReference: {fileID: 0}
+    - target: {fileID: 746464676714831022, guid: 1545a5e5115aaee499485e82cd0f9171, type: 3}
+      propertyPath: dors
+      value: 
+      objectReference: {fileID: 85526484}
     - target: {fileID: 7954858405786661734, guid: 1545a5e5115aaee499485e82cd0f9171, type: 3}
       propertyPath: anim
       value: 
@@ -759,7 +774,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8310884238240299673, guid: 05e9cb0d0b2d82e4ca1304c3bb23d304, type: 3}
       propertyPath: m_Name
-      value: background
+      value: background mid
       objectReference: {fileID: 0}
     - target: {fileID: 8310884238240299677, guid: 05e9cb0d0b2d82e4ca1304c3bb23d304, type: 3}
       propertyPath: m_RootOrder
