@@ -366,11 +366,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc4cbb8c1ad00034482784aef588c04f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  genDistance: 1.4
+  genDistance: 0.3
   rootext: {fileID: 5171858912367433204, guid: 821b069283777c847b32646402e5333f, type: 3}
   explodefab: {fileID: 3726460772320338225, guid: fc3bd114caf71e540afa01664bdee4f3, type: 3}
   enraged: 0
-  exptime: 0.6
+  exptime: 0.069
 --- !u!114 &8350001155601811009
 MonoBehaviour:
   m_ObjectHideFlags: 0

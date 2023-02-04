@@ -13,6 +13,7 @@ public class rootgenscript : MonoBehaviour
     bool exploding;
     public float exptime;
     GameObject curr;
+    bool immune = false;
     
     void Awake()
     {
@@ -45,6 +46,8 @@ public class rootgenscript : MonoBehaviour
                 StartCoroutine(explode());
             }
         }
+        if (GetComponent<Rigidbody2D>().velocity.y < 2)
+            StartCoroutine(getImmune());
     }
     IEnumerator explode()
     {
@@ -59,10 +62,15 @@ public class rootgenscript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("rootnode") && collision.gameObject != curr)
+        if (collision.gameObject.CompareTag("rootnode") && collision.gameObject != curr && !immune)
         {
             enraged = true;
         }
     }
-
+    IEnumerator getImmune()
+    {
+        immune = true;
+        yield return new WaitForSeconds(1);
+        immune = false;
+    }
 }
