@@ -11,6 +11,13 @@ public class PlayerScript : MonoBehaviour
     private Rigidbody2D playerbody;
     public rootgenscript rgn;
     public dooropenscript dors;
+    public AudioSource footsteps;
+    public AudioSource keysfx;
+    public AudioClip rightstep;
+    public AudioClip leftstep;
+    public AudioClip keygrab;
+    bool firststep = true;
+    bool moving = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,10 +28,21 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         var moveActionValue = moveAction.ReadValue<float>();
+        if (Mathf.Abs(playerbody.velocity.x) > 1)
+            moving = true;
+        else
+            moving = false;
         move(moveActionValue);
         if (jumpAction.triggered && grounded)
             jump();
-
+        if (!footsteps.isPlaying && moving && grounded)
+        {
+            if (firststep)
+                footsteps.PlayOneShot(rightstep);
+            else
+                footsteps.PlayOneShot(leftstep);
+            firststep = !firststep;
+        }
     }
 
 
@@ -71,6 +89,7 @@ public class PlayerScript : MonoBehaviour
             rgn.enraged = true;
             dors.open = true;
             Destroy(other.gameObject);
+            keysfx.PlayOneShot(keygrab);
         }
         if (other.gameObject.tag == "door")
             playerbody.velocity = new Vector2(playerbody.velocity.x, 40);
