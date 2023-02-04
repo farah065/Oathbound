@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3543853365240201416}
   - component: {fileID: 3543853365240201417}
   - component: {fileID: 3543853365240201418}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: spike bed
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 3543853365325062051}
   - component: {fileID: 3543853365325062053}
   - component: {fileID: 3543853365325062050}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: spike3
   m_TagString: trap
   m_Icon: {fileID: 0}
@@ -251,7 +251,7 @@ GameObject:
   - component: {fileID: 3543853366100123162}
   - component: {fileID: 3543853366100123164}
   - component: {fileID: 3543853366100123165}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: spike2
   m_TagString: trap
   m_Icon: {fileID: 0}
@@ -362,7 +362,7 @@ GameObject:
   - component: {fileID: 3543853366250627679}
   - component: {fileID: 3543853366250627665}
   - component: {fileID: 3543853366250627678}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: spike4
   m_TagString: trap
   m_Icon: {fileID: 0}
@@ -473,7 +473,7 @@ GameObject:
   - component: {fileID: 3543853366858217054}
   - component: {fileID: 3543853366858217040}
   - component: {fileID: 3543853366858217041}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: spike1
   m_TagString: trap
   m_Icon: {fileID: 0}
@@ -584,7 +584,7 @@ GameObject:
   - component: {fileID: 3543853367111867866}
   - component: {fileID: 3543853367111867868}
   - component: {fileID: 3543853367111867869}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: spike5
   m_TagString: trap
   m_Icon: {fileID: 0}

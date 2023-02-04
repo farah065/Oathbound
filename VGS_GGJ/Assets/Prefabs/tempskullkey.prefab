@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1828690572737271990}
   - component: {fileID: 1828690572737271991}
   - component: {fileID: 1828690572737271989}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: tempskullkey
   m_TagString: skullkey
   m_Icon: {fileID: 0}

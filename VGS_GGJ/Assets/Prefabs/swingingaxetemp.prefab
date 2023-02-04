@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6424261532179739466}
   - component: {fileID: 6424261532179739467}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: swingingaxetemp
   m_TagString: trap
   m_Icon: {fileID: 0}
@@ -65,7 +65,7 @@ GameObject:
   - component: {fileID: 6424261532630685543}
   - component: {fileID: 6424261532630685537}
   - component: {fileID: 6424261532630685536}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: axehandle
   m_TagString: trap
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 6424261533679941920}
   - component: {fileID: 6424261533679941922}
   - component: {fileID: 6424261533679941921}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: axepin
   m_TagString: trap
   m_Icon: {fileID: 0}
@@ -277,7 +277,7 @@ GameObject:
   - component: {fileID: 6424261534124844954}
   - component: {fileID: 6424261534124844948}
   - component: {fileID: 6424261534124844955}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: axetip
   m_TagString: trap
   m_Icon: {fileID: 0}
