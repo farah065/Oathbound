@@ -710,7 +710,7 @@ MonoBehaviour:
   playing: 0
   sfxPlayed: 0
   audioSource: {fileID: 1786984774104192927}
-  keySource: {fileID: 7866413829209850832}
+  audioSource2: {fileID: 7866413829209850832}
   sfxMixer: {fileID: -1738650314484988452, guid: 8f2b8e771691ff94bbc0b9f7bc458336, type: 2}
   musicMixer: {fileID: -4456513594453193818, guid: 8f2b8e771691ff94bbc0b9f7bc458336, type: 2}
   phase1: 0
