@@ -15,6 +15,8 @@ public class rootgenscript : MonoBehaviour
     GameObject curr;
     bool immune = false;
     int exindex = 0;
+
+    public static bool changeMusic = false;
     void Awake()
     {
         GameObject baseloc = GameObject.FindGameObjectWithTag("base");
@@ -43,10 +45,11 @@ public class rootgenscript : MonoBehaviour
             if (enraged && !exploding)
             {
                 exploding = true;
+                changeMusic = true;
                 StartCoroutine(explode());
             }
         }
-        if (GetComponent<Rigidbody2D>().velocity.y < 2)
+        if (GetComponent<Rigidbody2D>().velocity.y < -1)
             StartCoroutine(getImmune());
     }
     IEnumerator explode()

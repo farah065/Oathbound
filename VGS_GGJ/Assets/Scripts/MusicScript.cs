@@ -19,6 +19,7 @@ public class MusicScript : MonoBehaviour
     public bool phase1;
     public bool transition;
     public bool first = true;
+    public bool changed = false;
 
     public int i = 0;
     void Start()
@@ -79,9 +80,17 @@ public class MusicScript : MonoBehaviour
             audioSource2.pitch = 1;
             audioSource2.volume = 1f;
             if (!phase1)
-                audioSource.volume = 0.5f;
+                audioSource.volume = 0.3f;
             else
                 audioSource.volume = 1;
+        }
+
+        if (rootgenscript.changeMusic && !changed)
+        {
+            audioSource.Stop();
+            sfxPlayed = true;
+            phase1 = false;
+            changed = true;
         }
     }
 
