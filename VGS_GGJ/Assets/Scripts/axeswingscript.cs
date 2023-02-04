@@ -8,7 +8,7 @@ public class axeswingscript : MonoBehaviour
     bool directionright = true;
     float strength;
     public float dampener = 25;
-    public float percdamp = 0.25f;
+    public float percdamp = 0.15f;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,13 +27,13 @@ public class axeswingscript : MonoBehaviour
             if (directionright)
             {
                 transform.eulerAngles += Vector3.forward * percdamp * strength / dampener;
-                if (transform.eulerAngles.z >= 75 && transform.eulerAngles.z < 150)
+                if (transform.eulerAngles.z >= 55 && transform.eulerAngles.z < 150)
                     directionright = false;
             }
             else
             {
                 transform.eulerAngles += Vector3.back * percdamp * strength / dampener;
-                if (transform.eulerAngles.z <= 285 && transform.eulerAngles.z > 210)
+                if (transform.eulerAngles.z <= 305 && transform.eulerAngles.z > 210)
                     directionright = true;
             }
 
