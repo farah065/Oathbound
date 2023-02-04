@@ -197,14 +197,14 @@ MonoBehaviour:
   jumpSpeed: 5
   rgn: {fileID: 7954858405786661734}
   dors: {fileID: 8943160710996262633, guid: 7660286e12556c74885ed4b96ccf3032, type: 3}
-  anim: {fileID: 8009792423046474626}
-  direction: 1
-  switched: 0
   footsteps: {fileID: -1598334722531688882}
-  keysfx: {fileID: 7866413829209850832}
+  keysfx: {fileID: -1598334722531688882}
   rightstep: {fileID: 8300000, guid: eb04c24b01b65f3429924cbebce88b84, type: 3}
   leftstep: {fileID: 8300000, guid: f228c7672e7315845bc3fd720303b3d1, type: 3}
   keygrab: {fileID: 8300000, guid: 4a3c3072faed86641b2c545a125f06a6, type: 3}
+  anim: {fileID: 8009792423046474626}
+  direction: 1
+  switched: 0
   moveAction:
     m_Name: Move
     m_Type: 0
@@ -385,8 +385,6 @@ MonoBehaviour:
 --- !u!95 &8009792423046474626
 Animator:
   serializedVersion: 5
---- !u!82 &-1598334722531688882
-AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -404,6 +402,14 @@ AudioSource:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!82 &-1598334722531688882
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746464676714830993}
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}

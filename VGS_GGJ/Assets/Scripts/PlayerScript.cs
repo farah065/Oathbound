@@ -18,13 +18,20 @@ public class PlayerScript : MonoBehaviour
     public AudioClip keygrab;
     bool firststep = true;
     bool moving = false;
-    // Start is called before the first frame update
+
+    public Animator anim;
+
+    private Transform playerTR;
+    public int direction = 1;
+    public bool switched;
+
     void Start()
     {
         playerbody = gameObject.GetComponent<Rigidbody2D>();
+        playerTR = gameObject.GetComponent<Transform>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         var moveActionValue = moveAction.ReadValue<float>();
@@ -42,6 +49,28 @@ public class PlayerScript : MonoBehaviour
             else
                 footsteps.PlayOneShot(leftstep);
             firststep = !firststep;
+        }
+
+        anim.SetFloat("speed", Mathf.Abs(playerbody.velocity.x));
+
+        if (playerbody.velocity.x > 0)
+        {
+            direction = 1;
+        }
+        else if (playerbody.velocity.x < 0)
+        {
+            direction = -1;
+        }
+
+        if (direction == -1 && !switched)
+        {
+            switched = true;
+            playerTR.localScale = new Vector3(playerTR.localScale.x * -1, playerTR.localScale.y, playerTR.localScale.z);
+        }
+        if (direction == 1 && switched)
+        {
+            switched = false;
+            playerTR.localScale = new Vector3(playerTR.localScale.x * -1, playerTR.localScale.y, playerTR.localScale.z);
         }
     }
 
