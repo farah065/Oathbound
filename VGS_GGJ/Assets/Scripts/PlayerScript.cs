@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Utilities;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -25,6 +26,17 @@ public class PlayerScript : MonoBehaviour
     public int direction = 1;
     public bool switched;
 
+    private PlayerInput playerInput;
+
+    private InputAction moveAction;
+    private InputAction jumpAction;
+
+    void Awake()
+    {
+        playerInput = GetComponent<PlayerInput>();
+        jumpAction = playerInput.actions["Jump"];
+        moveAction = playerInput.actions["Move"];
+    }
     void Start()
     {
         playerbody = gameObject.GetComponent<Rigidbody2D>();
@@ -44,8 +56,6 @@ public class PlayerScript : MonoBehaviour
             footsteps.Stop();
         }
         move(moveActionValue);
-        if (jumpAction.triggered && grounded)
-            jump();
         if (!footsteps.isPlaying && moving && grounded)
         {
             if (firststep)
@@ -79,26 +89,25 @@ public class PlayerScript : MonoBehaviour
     }
 
 
-    public InputAction moveAction;
-    public InputAction jumpAction;
 
     void OnEnable()
     {
-        moveAction.Enable();
-        jumpAction.Enable();
+        playerInput.enabled = true;
+        jumpAction.performed += jump;
     }
     void OnDisable()
     {
-        moveAction.Disable();
-        jumpAction.Disable();
+        playerInput.enabled = false;
+        jumpAction.performed -= jump;
     }
 
-    private void move(float direction){
-        playerbody.velocity = new Vector2(direction * moveSpeed, playerbody.velocity.y);
+    private void move(float moveActionValue){
+        playerbody.velocity = new Vector2(moveActionValue * moveSpeed, playerbody.velocity.y);
     }
 
-    private void jump(){
-        playerbody.velocity = new Vector2(playerbody.velocity.x, jumpSpeed);
+    private void jump(InputAction.CallbackContext context){
+        if(grounded)
+            playerbody.velocity = new Vector2(playerbody.velocity.x, jumpSpeed);
     }
 
     void OnCollisionEnter2D(Collision2D other)
@@ -116,11 +125,11 @@ public class PlayerScript : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.tag == "explosion")
-            enabled = false;
+            killPlayer();
         if (other.gameObject.tag == "enemy")
-            enabled = false;
+            killPlayer();
         if (other.gameObject.tag == "trap")
-            enabled = false;
+            killPlayer();
         if (other.gameObject.tag == "skullkey")
         {
             rgn.enraged = true;
@@ -135,6 +144,10 @@ public class PlayerScript : MonoBehaviour
             Destroy(other.gameObject);
             StartCoroutine(Jmpboost());
         }
+    }
+
+    private void killPlayer(){
+        enabled = false;
     }
     IEnumerator Jmpboost()
     {

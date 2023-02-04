@@ -49,7 +49,7 @@ public class rootgenscript : MonoBehaviour
                 StartCoroutine(explode());
             }
         }
-        if (GetComponent<Rigidbody2D>().velocity.y < 2)
+        if (GetComponent<Rigidbody2D>().velocity.y < -1)
             StartCoroutine(getImmune());
     }
     IEnumerator explode()
