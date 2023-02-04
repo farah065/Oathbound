@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 746464676714831022}
   - component: {fileID: 7954858405786661734}
   - component: {fileID: 8350001155601811009}
+  - component: {fileID: 8009792423046474626}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -194,6 +195,9 @@ MonoBehaviour:
   jumpSpeed: 3
   rgn: {fileID: 7954858405786661734}
   dors: {fileID: 8943160710996262633, guid: 7660286e12556c74885ed4b96ccf3032, type: 3}
+  anim: {fileID: 8009792423046474626}
+  direction: 1
+  switched: 0
   moveAction:
     m_Name: Move
     m_Type: 0
@@ -371,3 +375,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slowRate: 0.2
   duration: 2
+--- !u!95 &8009792423046474626
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746464676714830993}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 23a92871010d3994882aa62c425974d1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
