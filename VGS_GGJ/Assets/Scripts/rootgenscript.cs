@@ -13,8 +13,8 @@ public class rootgenscript : MonoBehaviour
     bool exploding;
     public float exptime;
     GameObject curr;
-    // Start is called before the first frame update
-    void Start()
+    
+    void Awake()
     {
         GameObject baseloc = GameObject.FindGameObjectWithTag("base");
         lastpoint = baseloc.transform;

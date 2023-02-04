@@ -7,14 +7,14 @@ public class PlayerScript : MonoBehaviour
 {
     public float moveSpeed = 3;
     public float jumpSpeed = 3;
-    public bool grounded = true;
-    public Rigidbody2D playerbody;
+    private bool grounded = true;
+    private Rigidbody2D playerbody;
     public rootgenscript rgn;
     public dooropenscript dors;
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerbody = gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -63,6 +63,8 @@ public class PlayerScript : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.tag == "explosion")
+            enabled = false;
+        if (other.gameObject.tag == "enemy")
             enabled = false;
         if (other.gameObject.tag == "skullkey")
         {

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1259276083465022245}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: endedge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 3665858810286924684}
   - component: {fileID: 2396380291125600260}
   - component: {fileID: 5809707463252102323}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: temprootnode
   m_TagString: rootnode
   m_Icon: {fileID: 0}
