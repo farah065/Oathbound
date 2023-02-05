@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1927724171266542552}
   - component: {fileID: 1927724171266542553}
   - component: {fileID: 1927724171266542554}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: JMP Power Up
   m_TagString: Power Up (JMP)
   m_Icon: {fileID: 0}

@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 746464676714831018}
   - component: {fileID: 746464676714831021}
-  - component: {fileID: 746464676714831020}
   - component: {fileID: 746464676714831023}
   - component: {fileID: 746464676714831022}
   - component: {fileID: 7954858405786661734}
@@ -96,74 +95,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &746464676714831020
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 746464676714830993}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.92}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.089999996, y: -0.71}
-      - {x: 0.099999994, y: -0.96}
-      - {x: 0.34, y: -0.96}
-      - {x: 0.35, y: -0.87}
-      - {x: 0.26999998, y: -0.84999996}
-      - {x: 0.29, y: -0.65999997}
-      - {x: 0.35, y: -0.61}
-      - {x: 0.35, y: -0.22999999}
-      - {x: 0.53, y: -0.22999999}
-      - {x: 0.53999996, y: -0.19999999}
-      - {x: 0.53999996, y: 0.01}
-      - {x: 0.42999998, y: 0.08}
-      - {x: 0.42999998, y: 0.13}
-      - {x: 0.35, y: 0.21}
-      - {x: 0.22999999, y: 0.37}
-      - {x: 0.19999999, y: 0.39}
-      - {x: 0.26999998, y: 0.51}
-      - {x: 0.26999998, y: 0.77}
-      - {x: 0.22999999, y: 0.89}
-      - {x: 0.17999999, y: 0.96}
-      - {x: -0.06, y: 0.96}
-      - {x: -0.06, y: 0.9}
-      - {x: -0.21, y: 0.90999997}
-      - {x: -0.26999998, y: 0.84999996}
-      - {x: -0.26, y: 0.44}
-      - {x: -0.35, y: 0.25}
-      - {x: -0.53999996, y: -0.089999996}
-      - {x: -0.53999996, y: -0.22}
-      - {x: -0.51, y: -0.32999998}
-      - {x: -0.48, y: -0.34}
-      - {x: -0.28, y: -0.34}
-      - {x: -0.26, y: -0.32}
-      - {x: -0.26, y: -0.34}
-      - {x: -0.28, y: -0.34}
-      - {x: -0.29999998, y: -0.35999998}
-      - {x: -0.31, y: -0.61}
-      - {x: -0.26999998, y: -0.69}
-      - {x: -0.22999999, y: -0.71}
-      - {x: -0.22, y: -0.96}
-      - {x: 0.02, y: -0.96}
-      - {x: 0.03, y: -0.87}
-      - {x: -0.049999997, y: -0.84}
-      - {x: 0.02, y: -0.68}
 --- !u!50 &746464676714831023
 Rigidbody2D:
   serializedVersion: 4
@@ -199,6 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   jumpSpeed: 5
+  ascendingSpeed: 0.1
   rgn: {fileID: 7954858405786661734}
   dors: {fileID: 5699139170852823692, guid: 0517fade41ff3a7419d792b87eafbfed, type: 3}
   footsteps: {fileID: -1598334722531688882}
@@ -208,11 +140,14 @@ MonoBehaviour:
   keygrab: {fileID: 8300000, guid: 4a3c3072faed86641b2c545a125f06a6, type: 3}
   hp: 3
   playerRen: {fileID: 0}
+  h1: {fileID: 0}
+  h2: {fileID: 0}
+  h3: {fileID: 0}
   invincible: 0
   anim: {fileID: 8009792423046474626}
+  inElevator: 0
   direction: 1
   switched: 0
-  inElevator: 0
 --- !u!114 &7954858405786661734
 MonoBehaviour:
   m_ObjectHideFlags: 0

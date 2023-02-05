@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5699139170852823695}
   - component: {fileID: 5699139170852823680}
   - component: {fileID: 5699139170852823692}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: elevator
   m_TagString: door
   m_Icon: {fileID: 0}
@@ -147,3 +147,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   open: 0
   close: 0
+  engaged: 0
+  ascendingSpeed: 0
+  speed: 0

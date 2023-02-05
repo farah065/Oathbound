@@ -90,6 +90,11 @@ public class MusicScript : MonoBehaviour
             phase1 = false;
             changed = true;
         }
+        if(!rootgenscript.changeMusic && changed){
+            audioSource.Stop();
+            phase1 = true;
+            changed = false;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

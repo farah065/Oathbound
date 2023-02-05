@@ -18,6 +18,8 @@ TagManager:
   - hp2
   - hp3
   - hp
+  - Transition
+  - Altar
   layers:
   - Default
   - TransparentFX

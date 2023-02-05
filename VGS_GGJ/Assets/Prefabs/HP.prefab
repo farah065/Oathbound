@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8341115980525735274}
   - component: {fileID: 8341115980525735275}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: h1 out
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8341115980579850752}
   - component: {fileID: 8341115980579850753}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: h3 out
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8341115980658017213}
   - component: {fileID: 8341115980658017210}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: h1
   m_TagString: hp1
   m_Icon: {fileID: 0}
@@ -261,7 +261,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8341115980684896477}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: HP
   m_TagString: hp
   m_Icon: {fileID: 0}
@@ -299,7 +299,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8341115981121409660}
   - component: {fileID: 8341115981121409661}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: h2
   m_TagString: hp2
   m_Icon: {fileID: 0}
@@ -383,7 +383,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8341115981404653109}
   - component: {fileID: 8341115981404653106}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: h2 out
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -467,7 +467,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8341115981961510095}
   - component: {fileID: 8341115981961510092}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: h3
   m_TagString: hp3
   m_Icon: {fileID: 0}
