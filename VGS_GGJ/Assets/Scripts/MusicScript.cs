@@ -18,15 +18,12 @@ public class MusicScript : MonoBehaviour
 
     public bool phase1;
     public bool changed = false;
-
-    public int i = 0;
     void Start()
     {
         audioSource.volume = 1;
         clips = Resources.LoadAll<AudioClip>("Audio");
-        audioSource.clip = clips[i];
+        audioSource.clip = clips[PlayerPrefs.GetInt("CurrentLevel") - 1];
         audioSource.Play();
-        i++;
         phase1 = true;
     }
 
@@ -37,13 +34,7 @@ public class MusicScript : MonoBehaviour
         {
             if (phase1)
             {
-                if(i < 4)
-                {
-                    audioSource.clip = clips[i];
-                    i++;
-                }
-                else
-                    audioSource.clip = clips[4];
+                audioSource.clip = clips[PlayerPrefs.GetInt("CurrentLevel") - 1];
             }
             else
             {
@@ -56,7 +47,7 @@ public class MusicScript : MonoBehaviour
                 else
                 {
                     //audioSource.outputAudioMixerGroup = musicMixer;
-                    audioSource.clip = clips[5];
+                    audioSource.clip = clips[6];
                 }
             }
             audioSource.Play();
@@ -68,7 +59,7 @@ public class MusicScript : MonoBehaviour
             audioSource2.pitch = 0.5f;
             audioSource2.volume = 0.5f;
             if (!phase1)
-                audioSource.volume = 0.1f;
+                audioSource.volume = 0.05f;
             else
                 audioSource.volume = 0.5f;
         }
@@ -78,7 +69,7 @@ public class MusicScript : MonoBehaviour
             audioSource2.pitch = 1;
             audioSource2.volume = 1f;
             if (!phase1)
-                audioSource.volume = 0.3f;
+                audioSource.volume = 0.15f;
             else
                 audioSource.volume = 1;
         }
