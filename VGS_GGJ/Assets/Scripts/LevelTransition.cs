@@ -24,6 +24,7 @@ public class LevelTransition : MonoBehaviour
             int currLevelNum = int.Parse(SceneManager.GetActiveScene().name.Substring(6));
             int nextLevelNum = currLevelNum + 1;
             string nextLevel = "Level " + nextLevelNum;
+            PlayerPrefs.SetInt("CurrentLevel", nextLevelNum);
             SceneManager.LoadScene(nextLevel);
         }
 
