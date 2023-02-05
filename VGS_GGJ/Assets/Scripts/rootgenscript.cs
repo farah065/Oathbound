@@ -17,6 +17,7 @@ public class rootgenscript : MonoBehaviour
     int exindex = 0;
     float xdiff;
     public static bool changeMusic = false;
+    public float rootoffset = 0.7f;
     void Awake()
     {
         GameObject baseloc = GameObject.FindGameObjectWithTag("base");
@@ -31,11 +32,11 @@ public class rootgenscript : MonoBehaviour
         if (!(enraged && nodes.Count == 0))
         {
             xdiff = playerLocation.position.x - lastpoint.position.x;
-            float ydiff = playerLocation.position.y - 0.7f - lastpoint.position.y;
+            float ydiff = playerLocation.position.y - rootoffset - lastpoint.position.y;
             if (genDistance * genDistance < (xdiff * xdiff) + (ydiff * ydiff))
             {
                 float midx = (playerLocation.position.x + lastpoint.position.x) / 2;
-                float midy = (playerLocation.position.y - 0.7f + lastpoint.position.y) / 2;
+                float midy = (playerLocation.position.y - rootoffset + lastpoint.position.y) / 2;
                 float angle = Mathf.Rad2Deg * Mathf.Atan2(ydiff, xdiff);
                 Vector3 pos = new Vector3(midx, midy, 0);
                 curr = Instantiate(rootext, pos, Quaternion.Euler(0, 0, angle));
