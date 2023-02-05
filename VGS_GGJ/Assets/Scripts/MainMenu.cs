@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class MainMenu : MonoBehaviour
 {
@@ -14,6 +15,11 @@ public class MainMenu : MonoBehaviour
 
     Resolution[] resolutions;
     public static int currentResolutionIndex = 0;
+    EventSystem eventSystem;
+    private GameObject mainMenuUI;
+    private GameObject controlsMenuUI;
+    private GameObject firstSelectedMainMenu;
+    private GameObject firstSelectedControls;
     void Start()
     {
         // creating array of all possible resolutions and getting the index for the current one
@@ -46,6 +52,11 @@ public class MainMenu : MonoBehaviour
             audioSource.clip = credits;
             audioSource.Play();
         }
+        mainMenuUI = gameObject.transform.Find("MainMenu").gameObject;
+        controlsMenuUI = gameObject.transform.Find("Controls Menu").gameObject;
+        firstSelectedMainMenu = mainMenuUI.transform.Find("Play Game").gameObject;
+        firstSelectedControls = controlsMenuUI.transform.Find("Rebind Move Left/TriggerRebindButton").gameObject;
+        eventSystem = EventSystem.current;
     }
 
     public void SettingsScene()
@@ -61,5 +72,19 @@ public class MainMenu : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void controls()
+    {
+        mainMenuUI.SetActive(false);
+        controlsMenuUI.SetActive(true);
+        eventSystem.SetSelectedGameObject(firstSelectedControls);
+    }
+
+    public void back()
+    {
+        mainMenuUI.SetActive(true);
+        controlsMenuUI.SetActive(false);
+        eventSystem.SetSelectedGameObject(firstSelectedMainMenu);
     }
 }

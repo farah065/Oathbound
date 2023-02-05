@@ -135,6 +135,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1112517010765953904, guid: 181091e319970a24fa37a0ee9004e0ee, type: 3}
+      propertyPath: m_Colors.m_PressedColor.b
+      value: 0.31764707
+      objectReference: {fileID: 0}
+    - target: {fileID: 1112517010765953904, guid: 181091e319970a24fa37a0ee9004e0ee, type: 3}
+      propertyPath: m_Colors.m_PressedColor.g
+      value: 0.31764707
+      objectReference: {fileID: 0}
+    - target: {fileID: 1112517010765953904, guid: 181091e319970a24fa37a0ee9004e0ee, type: 3}
+      propertyPath: m_Colors.m_PressedColor.r
+      value: 0.31764707
+      objectReference: {fileID: 0}
     - target: {fileID: 1559243652069585439, guid: 181091e319970a24fa37a0ee9004e0ee, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -149,7 +161,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1559243653513517081, guid: 181091e319970a24fa37a0ee9004e0ee, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1559243653513517085, guid: 181091e319970a24fa37a0ee9004e0ee, type: 3}
       propertyPath: m_Camera
