@@ -1,0 +1,539 @@
+fileFormatVersion: 2
+guid: d00b09e8584148a489d46d10db441c06
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: the Namless dying-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 0
+        width: 108
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dad9224a4cada354ab3b920060da00ff
+      internalID: 1509068401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the Namless dying-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 0
+        width: 121
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01fdf4a5bdbfb5e4b975cdcc6ec62a9d
+      internalID: 769412962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the Namless dying-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 0
+        width: 133
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0040695374fe6146939b9f3a28bfb34
+      internalID: -649055103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the Namless dying-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 0
+        width: 158
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61251726dcbb875409c047d7d8e5d0f6
+      internalID: 2141165174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the Namless dying-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 17
+        width: 183
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1301c78cbc47d6a4dbc0a23fa778556e
+      internalID: 1656140253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the Namless dying-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 1
+        width: 189
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5aaa7a2636ab4944a53dcf402640a91
+      internalID: 1982782942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the Namless dying-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 0
+        width: 178
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d578ad1391e69f499bb7807c4a8bcd4
+      internalID: 2036153222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the Namless dying-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1821
+        y: 0
+        width: 178
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e627189ec4e75b40992b55cf2ed4d63
+      internalID: 1693431630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the Namless dying-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 2062
+        y: 1
+        width: 194
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b09f6f198151bc48b5ed83259668e20
+      internalID: -421739582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the Namless dying-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 2322
+        y: 2
+        width: 188
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af88753eb01725144b259785718d524a
+      internalID: -115216502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the Namless dying-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 2726
+        y: 17
+        width: 40
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fde1487214e88f40968c9005d937fc0
+      internalID: 182652407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the Namless dying-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 2938
+        y: 17
+        width: 85
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfa808518bb7e2644b60250c7281508f
+      internalID: 324192644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the Namless dying-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 3167
+        y: 17
+        width: 112
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bec7e64d731ae340b9ac3209a8e02b7
+      internalID: 203454422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the Namless dying-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 3415
+        y: 17
+        width: 121
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2b0af42f13710848827fac05681130a
+      internalID: 1516155195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the Namless dying-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 3672
+        y: 17
+        width: 118
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bdacb99848919f47a479c44c5d3b4de
+      internalID: 773991471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the Namless dying-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 3926
+        y: 17
+        width: 121
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 451bfd0b72d3b944eb6cbab289529725
+      internalID: -1501025027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the Namless dying-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 4183
+        y: 17
+        width: 120
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9169803fe32a922448465da24d09f7e8
+      internalID: 1817451563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the Namless dying-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 4439
+        y: 17
+        width: 121
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a3e428216cb39d4283739c71c28edfa
+      internalID: 965478383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      the Namless dying-Sheet_5: 1982782942
+      the Namless dying-Sheet_34: 1817451563
+      the Namless dying-Sheet_11: -230623991
+      the Namless dying-Sheet_2: -649055103
+      the Namless dying-Sheet_25: 2063998168
+      the Namless dying-Sheet_19: 1140108975
+      the Namless dying-Sheet_35: 965478383
+      the Namless dying-Sheet_18: -1918849705
+      the Namless dying-Sheet_28: 182652407
+      the Namless dying-Sheet_37: 435847428
+      the Namless dying-Sheet_14: -899631753
+      the Namless dying-Sheet_0: 1509068401
+      the Namless dying-Sheet_30: 203454422
+      the Namless dying-Sheet_31: 1516155195
+      the Namless dying-Sheet_15: -649722203
+      the Namless dying-Sheet_13: -115216502
+      the Namless dying-Sheet_16: 1420802612
+      the Namless dying-Sheet_23: 1273198071
+      the Namless dying-Sheet_4: 1656140253
+      the Namless dying-Sheet_9: 506941614
+      the Namless dying-Sheet_36: 621447869
+      the Namless dying-Sheet_24: 2078721277
+      the Namless dying-Sheet_17: -2115122747
+      the Namless dying-Sheet_7: 1693431630
+      the Namless dying-Sheet_26: -680434816
+      the Namless dying-Sheet_27: 911241308
+      the Namless dying-Sheet_29: 324192644
+      the Namless dying-Sheet_21: 992903421
+      the Namless dying-Sheet_10: -827040130
+      the Namless dying-Sheet_22: 2070822660
+      the Namless dying-Sheet_6: 2036153222
+      the Namless dying-Sheet_8: -421739582
+      the Namless dying-Sheet_32: 773991471
+      the Namless dying-Sheet_33: -1501025027
+      the Namless dying-Sheet_12: -1632895051
+      the Namless dying-Sheet_20: 493286556
+      the Namless dying-Sheet_3: 2141165174
+      the Namless dying-Sheet_1: 769412962
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

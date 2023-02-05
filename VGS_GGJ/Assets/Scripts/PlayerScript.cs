@@ -22,6 +22,9 @@ public class PlayerScript : MonoBehaviour
 
     public int hp = 3;
     public Renderer playerRen;
+    public Renderer h1;
+    public Renderer h2;
+    public Renderer h3;
     public bool invincible;
 
     public Animator anim;
@@ -46,6 +49,10 @@ public class PlayerScript : MonoBehaviour
         playerbody = gameObject.GetComponent<Rigidbody2D>();
         playerTR = gameObject.GetComponent<Transform>();
         playerRen = gameObject.GetComponent<Renderer>();
+
+        h1 = GameObject.FindGameObjectWithTag("hp1").GetComponent<Renderer>();
+        h2 = GameObject.FindGameObjectWithTag("hp2").GetComponent<Renderer>();
+        h3 = GameObject.FindGameObjectWithTag("hp3").GetComponent<Renderer>();
     }
 
 
@@ -140,6 +147,7 @@ public class PlayerScript : MonoBehaviour
             rgn.enraged = true;
             dors.open = true;
             Destroy(other.gameObject);
+            anim.SetBool("skull", true);
             //keysfx.PlayOneShot(keygrab);
         }
         if (other.gameObject.tag == "door")
@@ -158,6 +166,10 @@ public class PlayerScript : MonoBehaviour
 
     private void killPlayer(){
         enabled = false;
+        h1.enabled = false;
+        h2.enabled = false;
+        h3.enabled = false;
+        anim.SetBool("dead", true);
     }
     IEnumerator Jmpboost()
     {
@@ -172,10 +184,15 @@ public class PlayerScript : MonoBehaviour
         hp--;
         if (hp <= 0)
         {
+            h1.enabled = false;
             killPlayer();
         }
         else
         {
+            if (hp == 2)
+                h3.enabled = false;
+            else if (hp == 1)
+                h2.enabled = false;
             invincible = true;
             for (int i = 0; i < 3; i++)
             {
