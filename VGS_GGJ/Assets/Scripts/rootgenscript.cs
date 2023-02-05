@@ -21,6 +21,7 @@ public class rootgenscript : MonoBehaviour
     {
         GameObject baseloc = GameObject.FindGameObjectWithTag("base");
         lastpoint = baseloc.transform.GetChild(0);
+        changeMusic = false;
     }
 
     // Update is called once per frame

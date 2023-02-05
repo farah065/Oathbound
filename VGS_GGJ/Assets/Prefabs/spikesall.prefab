@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7849427478222184858}
   - component: {fileID: 7849427478222184852}
   - component: {fileID: 7849427478222184859}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: spikesvisiblehalf (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7849427478395707744}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: spikesall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 7849427478676321738}
   - component: {fileID: 7849427478676321737}
   - component: {fileID: 7849427478676321736}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: spikesvisiblehalf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,6 +263,10 @@ PrefabInstance:
       propertyPath: anim2
       value: 
       objectReference: {fileID: 7849427478222184859}
+    - target: {fileID: 3543853365240201418, guid: 2676f9d3c9ca29c4fb4710f87461bf65, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3543853365240201419, guid: 2676f9d3c9ca29c4fb4710f87461bf65, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -351,7 +355,8 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3543853365240201418, guid: 2676f9d3c9ca29c4fb4710f87461bf65, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2676f9d3c9ca29c4fb4710f87461bf65, type: 3}
 --- !u!4 &7849427477958680958 stripped
 Transform:

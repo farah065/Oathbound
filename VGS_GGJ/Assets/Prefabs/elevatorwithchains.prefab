@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3430207165049545435}
   - component: {fileID: 3430207165049545429}
   - component: {fileID: 3430207165049545428}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -457,7 +457,7 @@ GameObject:
   - component: {fileID: 3430207165423987620}
   - component: {fileID: 3430207165423987627}
   - component: {fileID: 3430207165423987623}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: elevatorwithchains
   m_TagString: door
   m_Icon: {fileID: 0}
@@ -592,6 +592,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   open: 0
   close: 0
+  engaged: 0
+  ascendingSpeed: 0
+  speed: 0
 --- !u!1 &3430207166516894462
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,7 +605,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3430207166516894456}
   - component: {fileID: 3430207166516894463}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
