@@ -152,8 +152,6 @@ public class PlayerScript : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Finish")
-            SceneManager.LoadScene("End Scene");
         if (other.gameObject.tag == "explosion")
             killPlayer();
         if (other.gameObject.tag == "enemy" && !invincible)
