@@ -262,8 +262,16 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
                 m_RebindOperation = null;
             }
 
+            // Disable action before rebinding
+            action.Disable();
+
             // Configure the rebind.
             m_RebindOperation = action.PerformInteractiveRebinding(bindingIndex)
+                .WithControlsExcluding("<Mouse>/leftButton")
+                .WithControlsExcluding("<Mouse>/rightButton")
+                .WithControlsExcluding("<Mouse>/press")
+                .WithControlsExcluding("<Pointer>/position")
+                .WithCancelingThrough("<Keyboard>/escape")
                 .OnCancel(
                     operation =>
                     {
@@ -271,6 +279,7 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
                         m_RebindOverlay?.SetActive(false);
                         UpdateBindingDisplay();
                         CleanUp();
+                        action.Enable();
                     })
                 .OnComplete(
                     operation =>
@@ -288,6 +297,7 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
                             if (nextBindingIndex < action.bindings.Count && action.bindings[nextBindingIndex].isPartOfComposite)
                                 PerformInteractiveRebind(action, nextBindingIndex, true);
                         }
+                        action.Enable();
                     });
 
             // If it's a part binding, show the name of the part in the UI.

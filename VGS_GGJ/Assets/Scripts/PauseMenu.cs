@@ -4,16 +4,21 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 
 public class PauseMenu : MonoBehaviour
 {
     public static bool paused = false;
     private GameObject pauseMenuUI;
+    private GameObject controlsMenuUI;
     private PlayerScript player;
 
     private PlayerInput playerInput;
     private InputAction pauseAction;
     private InputAction restartAction;
+    private EventSystem eventSystem;
+    private GameObject firstSelectedPause;
+    private GameObject firstSelectedControls;
     void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
@@ -22,7 +27,10 @@ public class PauseMenu : MonoBehaviour
 
 
         paused = false;
-        pauseMenuUI = gameObject.transform.GetChild(0).gameObject;
+        pauseMenuUI = gameObject.transform.Find("Pause Menu").gameObject;
+        controlsMenuUI = gameObject.transform.Find("Controls Menu").gameObject;
+        firstSelectedPause = pauseMenuUI.transform.Find("Resume").gameObject;
+        firstSelectedControls = controlsMenuUI.transform.Find("Rebind Move Left/TriggerRebindButton").gameObject;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerScript>();
     }
     void Update()
@@ -31,7 +39,6 @@ public class PauseMenu : MonoBehaviour
 
     private void pause(InputAction.CallbackContext context)
     {
-        Debug.Log("pause");
         if(paused){
             resume();
         }else{
@@ -66,12 +73,25 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    public void controls(){
+        pauseMenuUI.SetActive(false);
+        controlsMenuUI.SetActive(true);
+        eventSystem.SetSelectedGameObject(firstSelectedControls);
+    }
+
+    public void back(){
+        pauseMenuUI.SetActive(true);
+        controlsMenuUI.SetActive(false);
+        eventSystem.SetSelectedGameObject(firstSelectedPause);
+    }
+
     private void OnEnable()
     {
         pauseAction.Enable();
         restartAction.Enable();
         pauseAction.performed += pause;
         restartAction.performed += restart;
+        eventSystem = EventSystem.current;
     }
     private void OnDisable() 
     {

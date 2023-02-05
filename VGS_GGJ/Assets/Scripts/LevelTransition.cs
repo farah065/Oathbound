@@ -37,7 +37,7 @@ public class LevelTransition : MonoBehaviour
         }
 
     }
-    void OnTriggerEnter2D(Collision2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         SceneManager.LoadScene("End Scene");
     }
