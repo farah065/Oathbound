@@ -1382,6 +1382,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   master: {fileID: 24100000, guid: 8f2b8e771691ff94bbc0b9f7bc458336, type: 2}
+  bgRen: {fileID: 364045452}
+  audioSource: {fileID: 396561042}
+  credits: {fileID: 8300000, guid: ca1d20e890468db43b91a87cbe59951f, type: 3}
 --- !u!114 &1597864715
 MonoBehaviour:
   m_ObjectHideFlags: 0

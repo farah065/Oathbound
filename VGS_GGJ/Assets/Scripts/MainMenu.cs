@@ -8,6 +8,9 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public AudioMixer master;
+    public Renderer bgRen;
+    public AudioSource audioSource;
+    public AudioClip credits;
 
     Resolution[] resolutions;
     public static int currentResolutionIndex = 0;
@@ -34,6 +37,15 @@ public class MainMenu : MonoBehaviour
         master.SetFloat("MasterVolume", Mathf.Log10(PlayerPrefs.GetFloat("MasterVolume", 1)) * 20);
         master.SetFloat("MusicVolume", Mathf.Log10(PlayerPrefs.GetFloat("MusicVolume", 1)) * 20);
         master.SetFloat("sfxVolume", Mathf.Log10(PlayerPrefs.GetFloat("sfxVolume", 1)) * 20);
+
+        PlayerPrefs.SetInt("Complete", LevelTransition.gameComplete);
+
+        if(PlayerPrefs.GetInt("Complete") == 1)
+        {
+            bgRen.enabled = false;
+            audioSource.clip = credits;
+            audioSource.Play();
+        }
     }
 
     public void SettingsScene()
