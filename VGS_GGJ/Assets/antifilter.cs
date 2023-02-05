@@ -8,7 +8,7 @@ public class antifilter : MonoBehaviour
     // Start is called before the first frame update
     SpriteRenderer spr;
     float vis = 1.5f;
-    public AudioSource audio;
+    public AudioSource audioSource;
     bool ok = false;
     void Start()
     {
@@ -23,7 +23,7 @@ public class antifilter : MonoBehaviour
         vis -= Time.deltaTime;
         tmp.a = Mathf.Lerp(0, 1, vis);
         spr.color = tmp;
-        if(!audio.isPlaying || (Input.anyKey && ok))
+        if(!audioSource.isPlaying || (Input.anyKey && ok))
         {
             SceneManager.LoadScene("Main Menu");
         }
