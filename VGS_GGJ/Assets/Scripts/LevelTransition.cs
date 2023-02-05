@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelTransition : MonoBehaviour
 {
     PlayerScript player;
+    public static int gameComplete = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +26,14 @@ public class LevelTransition : MonoBehaviour
             int nextLevelNum = currLevelNum + 1;
             string nextLevel = "Level " + nextLevelNum;
             PlayerPrefs.SetInt("CurrentLevel", nextLevelNum);
-            SceneManager.LoadScene(nextLevel);
+            if(currLevelNum < 6)
+                SceneManager.LoadScene(nextLevel);
+            else
+            {
+                gameComplete = 1;
+                PlayerPrefs.SetInt("CurrentLevel", 1);
+                SceneManager.LoadScene("Main Menu");
+            }
         }
 
     }
