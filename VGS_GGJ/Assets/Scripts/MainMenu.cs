@@ -24,7 +24,7 @@ public class MainMenu : MonoBehaviour
         }
 
         // playerprefs to make sure settings are as the user left them
-        PlayerPrefs.SetInt("Resolution", resolutions.Length -1);
+        
         Resolution resolution = resolutions[PlayerPrefs.GetInt("Resolution", resolutions.Length - 1)];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
 

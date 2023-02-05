@@ -33,7 +33,7 @@ public class Settings : MonoBehaviour
         resolution.AddOptions(options);
 
         // displaying the correct values for the UI stuff
-        resolution.value = MainMenu.currentResolutionIndex;
+        resolution.value = PlayerPrefs.GetInt("Resolution", MainMenu.currentResolutionIndex);
         resolution.RefreshShownValue();
 
         fullScreen.isOn = (PlayerPrefs.GetInt("FullScreen", 1) != 0);
@@ -48,7 +48,7 @@ public class Settings : MonoBehaviour
         MainMenu.currentResolutionIndex = resolutionIndex;
         PlayerPrefs.SetInt("Resolution", resolutionIndex);
         Resolution res = resolutions[resolutionIndex];
-        Screen.SetResolution(res.width, res.height, Screen.fullScreen);
+        Screen.SetResolution(res.width, res.height, Screen.fullScreenMode);
     }
 
     public void SetFullScreen(bool isFullScreen)
