@@ -26,14 +26,7 @@ public class LevelTransition : MonoBehaviour
             int nextLevelNum = currLevelNum + 1;
             string nextLevel = "Level " + nextLevelNum;
             PlayerPrefs.SetInt("CurrentLevel", nextLevelNum);
-            if(currLevelNum < 6)
-                SceneManager.LoadScene(nextLevel);
-            else
-            {
-                gameComplete = 1;
-                PlayerPrefs.SetInt("CurrentLevel", 1);
-                SceneManager.LoadScene("Main Menu");
-            }
+            SceneManager.LoadScene(nextLevel);
         }
 
     }
@@ -41,5 +34,8 @@ public class LevelTransition : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         SceneManager.LoadScene("End Scene");
+        gameComplete = 1;
+        PlayerPrefs.SetInt("CurrentLevel", 1);
+        SceneManager.LoadScene("Main Menu");
     }
 }
