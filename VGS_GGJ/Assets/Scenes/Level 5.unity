@@ -3478,6 +3478,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: spikesall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7849427479561902052, guid: 1a361df2b1c1eae4f8ee502038f08214, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a361df2b1c1eae4f8ee502038f08214, type: 3}
 --- !u!1 &1469852447

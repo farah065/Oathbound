@@ -311,6 +311,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: spike bed
       objectReference: {fileID: 0}
+    - target: {fileID: 3543853365325062050, guid: 2676f9d3c9ca29c4fb4710f87461bf65, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3543853365325062053, guid: 2676f9d3c9ca29c4fb4710f87461bf65, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -319,17 +323,33 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3543853366100123165, guid: 2676f9d3c9ca29c4fb4710f87461bf65, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3543853366250627665, guid: 2676f9d3c9ca29c4fb4710f87461bf65, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543853366250627678, guid: 2676f9d3c9ca29c4fb4710f87461bf65, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3543853366858217040, guid: 2676f9d3c9ca29c4fb4710f87461bf65, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3543853366858217041, guid: 2676f9d3c9ca29c4fb4710f87461bf65, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3543853367111867868, guid: 2676f9d3c9ca29c4fb4710f87461bf65, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543853367111867869, guid: 2676f9d3c9ca29c4fb4710f87461bf65, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2676f9d3c9ca29c4fb4710f87461bf65, type: 3}
