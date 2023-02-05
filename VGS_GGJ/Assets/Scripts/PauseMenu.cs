@@ -30,7 +30,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI = gameObject.transform.Find("Pause Menu").gameObject;
         controlsMenuUI = gameObject.transform.Find("Controls Menu").gameObject;
         firstSelectedPause = pauseMenuUI.transform.Find("Resume").gameObject;
-        firstSelectedControls = controlsMenuUI.transform.Find("Rebind Move Left/TriggerRebindButton").gameObject;
+        firstSelectedControls = controlsMenuUI.transform.Find("KeyboardControls/Rebind Move Left/TriggerRebindButton").gameObject;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerScript>();
     }
     void Update()
