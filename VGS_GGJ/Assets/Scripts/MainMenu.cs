@@ -55,7 +55,7 @@ public class MainMenu : MonoBehaviour
         mainMenuUI = gameObject.transform.Find("MainMenu").gameObject;
         controlsMenuUI = gameObject.transform.Find("Controls Menu").gameObject;
         firstSelectedMainMenu = mainMenuUI.transform.Find("Play Game").gameObject;
-        firstSelectedControls = controlsMenuUI.transform.Find("KeyboardControls/Rebind Move Left/TriggerRebindButton").gameObject;
+        firstSelectedControls = controlsMenuUI.transform.Find("Rebind Move Left/TriggerRebindButton").gameObject;
         eventSystem = EventSystem.current;
     }
 

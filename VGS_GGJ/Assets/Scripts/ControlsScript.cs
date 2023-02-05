@@ -23,15 +23,17 @@ public class ControlsScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    public void showKeyboard(){
+    public void showKeyboard()
+    {
         keyboardUI.SetActive(true);
         gamepadUI.SetActive(false);
         eventSystem.SetSelectedGameObject(firstSelectedKeyboard);
     }
-    public void showGamepad(){
+    public void showGamepad()
+    {
         keyboardUI.SetActive(false);
         gamepadUI.SetActive(true);
         eventSystem.SetSelectedGameObject(firstSelectedGamePad);
