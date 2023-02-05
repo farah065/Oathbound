@@ -8,6 +8,7 @@ public class PlayerScript : MonoBehaviour
 {
     public float moveSpeed = 3;
     public float jumpSpeed = 3;
+    public float ascendingSpeed = 0.1f;
     private bool grounded = true;
     private Rigidbody2D playerbody;
     public rootgenscript rgn;
@@ -25,6 +26,8 @@ public class PlayerScript : MonoBehaviour
     public bool invincible;
 
     public Animator anim;
+
+    public bool inElevator;
 
     private Transform playerTR;
     public int direction = 1;
@@ -56,6 +59,13 @@ public class PlayerScript : MonoBehaviour
             moving = true;
         else
             moving = false;
+
+        if (inElevator)
+        {
+            playerbody.velocity = new Vector3(0, playerbody.velocity.y);
+            moving = false;
+        }
+
         if(!moving || !grounded)
         {
             footsteps.Stop();
@@ -90,6 +100,11 @@ public class PlayerScript : MonoBehaviour
         {
             switched = false;
             playerTR.localScale = new Vector3(playerTR.localScale.x * -1, playerTR.localScale.y, playerTR.localScale.z);
+        }
+
+        if (inElevator)
+        {
+            playerTR.position = new Vector3(playerTR.position.x, playerTR.position.y + ascendingSpeed);
         }
     }
 
@@ -146,8 +161,10 @@ public class PlayerScript : MonoBehaviour
         {
             transform.position = other.transform.position;
             playerbody.velocity = new Vector2(0, 0);
+            inElevator = true;
             dors.close = true;
-            enabled = false;
+            dors.engaged = true;
+            dors.ascendingSpeed = ascendingSpeed;
         }
         if(other.gameObject.tag == "Power Up (JMP)")
         {
