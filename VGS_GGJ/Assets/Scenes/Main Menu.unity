@@ -1253,7 +1253,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Name
+  m_Text: CUM
 --- !u!222 &1309261044
 CanvasRenderer:
   m_ObjectHideFlags: 0
