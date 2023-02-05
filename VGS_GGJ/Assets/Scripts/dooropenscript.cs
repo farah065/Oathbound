@@ -6,11 +6,16 @@ public class dooropenscript : MonoBehaviour
 {
     public bool open = false;
     public bool close = false;
+    public bool engaged = false;
+    public float ascendingSpeed;
+    public float speed = 0;
+    private Transform elevatorTR;
     Animator anim;
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
+        elevatorTR = gameObject.GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -28,6 +33,10 @@ public class dooropenscript : MonoBehaviour
             close = false;
             anim.SetBool("close", true);
             StartCoroutine(closeclose());
+        }
+        if (engaged)
+        {
+            elevatorTR.position = new Vector3(elevatorTR.position.x, elevatorTR.position.y + ascendingSpeed);
         }
     }
     IEnumerator closeopen()

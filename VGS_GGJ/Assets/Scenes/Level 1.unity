@@ -2528,6 +2528,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3430207165423987623, guid: b92bfb1bf6566eb4e9a9c72f5c4ffbbc, type: 3}
+      propertyPath: open
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3430207165423987623, guid: b92bfb1bf6566eb4e9a9c72f5c4ffbbc, type: 3}
+      propertyPath: close
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3430207165423987626, guid: b92bfb1bf6566eb4e9a9c72f5c4ffbbc, type: 3}
       propertyPath: m_Name
       value: elevatorwithchains

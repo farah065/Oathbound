@@ -37,7 +37,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 746464676714830993}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.77, y: -3.45, z: 0}
+  m_LocalPosition: {x: -7.77, y: 16.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -200,161 +200,19 @@ MonoBehaviour:
   moveSpeed: 3
   jumpSpeed: 5
   rgn: {fileID: 7954858405786661734}
-  dors: {fileID: 8943160710996262633, guid: 7660286e12556c74885ed4b96ccf3032, type: 3}
+  dors: {fileID: 5699139170852823692, guid: 0517fade41ff3a7419d792b87eafbfed, type: 3}
   footsteps: {fileID: -1598334722531688882}
   keysfx: {fileID: -1598334722531688882}
   rightstep: {fileID: 8300000, guid: eb04c24b01b65f3429924cbebce88b84, type: 3}
   leftstep: {fileID: 8300000, guid: f228c7672e7315845bc3fd720303b3d1, type: 3}
   keygrab: {fileID: 8300000, guid: 4a3c3072faed86641b2c545a125f06a6, type: 3}
+  hp: 3
+  playerRen: {fileID: 0}
+  invincible: 0
   anim: {fileID: 8009792423046474626}
   direction: 1
   switched: 0
-  moveAction:
-    m_Name: Move
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: c4a33634-74b5-41d6-b045-c88df7a097db
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: WASD
-      m_Id: 56062851-e012-4a7c-8ff9-3a0c14a2486b
-      m_Path: 1DAxis
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move
-      m_Flags: 4
-    - m_Name: negative
-      m_Id: 91483255-54c3-4bfa-bf44-1c7ea86e87a3
-      m_Path: <Keyboard>/a
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move
-      m_Flags: 8
-    - m_Name: positive
-      m_Id: 429cf9eb-f6aa-49c9-9602-c57f9e83e3fc
-      m_Path: <Keyboard>/d
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move
-      m_Flags: 8
-    - m_Name: Arrow Keys
-      m_Id: 5986e6e5-fed9-4ab5-ad0f-9c719da289c1
-      m_Path: 1DAxis
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move
-      m_Flags: 4
-    - m_Name: negative
-      m_Id: e477550f-73a0-43d7-b3c6-0e65a0a8759c
-      m_Path: <Keyboard>/leftArrow
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move
-      m_Flags: 8
-    - m_Name: positive
-      m_Id: 8669b76d-0ec3-48d5-8bb5-1fcd7f42a632
-      m_Path: <Keyboard>/rightArrow
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move
-      m_Flags: 8
-    - m_Name: GamePad (D-Pad)
-      m_Id: c28eaed1-4f87-4a12-ab9e-fafdf81a7de9
-      m_Path: 1DAxis
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move
-      m_Flags: 4
-    - m_Name: negative
-      m_Id: 350db183-b7bb-4f62-857b-278849097345
-      m_Path: <Gamepad>/dpad/left
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move
-      m_Flags: 8
-    - m_Name: positive
-      m_Id: 02b01933-4cc9-4202-9a59-2a3b0c7b8f97
-      m_Path: <Gamepad>/dpad/right
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move
-      m_Flags: 8
-    - m_Name: GamePad (Stick)
-      m_Id: 360200ac-a345-4cdf-bdca-68e1c2452e97
-      m_Path: 1DAxis
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move
-      m_Flags: 4
-    - m_Name: negative
-      m_Id: f6613bbb-fc33-421e-8b96-460219d18656
-      m_Path: <Gamepad>/leftStick/left
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move
-      m_Flags: 8
-    - m_Name: positive
-      m_Id: 709fb3d7-e41f-4773-82bc-cfca9f53f83e
-      m_Path: <Gamepad>/leftStick/right
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move
-      m_Flags: 8
-    m_Flags: 0
-  jumpAction:
-    m_Name: Jump
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 0db6ed4b-34c6-4f49-a6cc-20a270503959
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: a848d3d9-6ebb-4869-8532-7a0289ee9b12
-      m_Path: <Gamepad>/buttonSouth
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Jump
-      m_Flags: 0
-    - m_Name: 
-      m_Id: cb71c0b5-b9dc-40a9-b849-e2f8c01d9c91
-      m_Path: <Keyboard>/w
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Jump
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 96398351-b7f6-43cb-b420-78dd60de8a9e
-      m_Path: <Keyboard>/upArrow
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Jump
-      m_Flags: 0
-    - m_Name: 
-      m_Id: db06e4a4-953b-4d00-884b-4cfe96fd181c
-      m_Path: <Keyboard>/space
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Jump
-      m_Flags: 0
-    m_Flags: 0
+  inElevator: 0
 --- !u!114 &7954858405786661734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -715,8 +573,7 @@ MonoBehaviour:
   sfxMixer: {fileID: -1738650314484988452, guid: 8f2b8e771691ff94bbc0b9f7bc458336, type: 2}
   musicMixer: {fileID: -4456513594453193818, guid: 8f2b8e771691ff94bbc0b9f7bc458336, type: 2}
   phase1: 0
-  transition: 0
-  first: 1
+  changed: 0
   i: 0
 --- !u!70 &8386477696707037201
 CapsuleCollider2D:
@@ -767,6 +624,14 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 7cf21650-b44e-4526-9ae8-b38771dc093e
     m_ActionName: PlayerMovement/Move[/Keyboard/a,/Keyboard/d,/Keyboard/leftArrow,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2ca8cce5-61eb-4d13-871c-e653f5ec1aad
+    m_ActionName: PauseMenu/Pause[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 43fe1997-de3c-4528-872d-92e43b8727cc
+    m_ActionName: PauseMenu/Restart[/Keyboard/r]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerMovement
