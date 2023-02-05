@@ -2494,7 +2494,7 @@ MonoBehaviour:
   master: {fileID: 24100000, guid: 8f2b8e771691ff94bbc0b9f7bc458336, type: 2}
   bgRen: {fileID: 364045452}
   audioSource: {fileID: 396561042}
-  credits: {fileID: 8300000, guid: da5b6b940393ae042aac3910855c4e5d, type: 3}
+  credits: {fileID: 8300000, guid: ca1d20e890468db43b91a87cbe59951f, type: 3}
 --- !u!114 &1597864715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2517,7 +2517,7 @@ AudioSource:
   m_GameObject: {fileID: 1597864709}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: -1738650314484988452, guid: 8f2b8e771691ff94bbc0b9f7bc458336, type: 2}
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 71ae3efaff9a28b4d94f2e88f3951fc5, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
@@ -2882,7 +2882,6 @@ GameObject:
   - component: {fileID: 1754739063}
   - component: {fileID: 1754739065}
   - component: {fileID: 1754739064}
-  - component: {fileID: 1754739066}
   m_Layer: 5
   m_Name: Controls Menu
   m_TagString: Untagged
@@ -2954,18 +2953,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1754739062}
   m_CullTransparentMesh: 1
---- !u!114 &1754739066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1754739062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e3872839c4d22b49bcb01018ec6d4ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1762425698 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5024266567257472466, guid: f25dcd618d3acd64795bf8bb32edb6c9, type: 3}
