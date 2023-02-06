@@ -3,32 +3,55 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class cutscene : MonoBehaviour
+public class Cutscene : MonoBehaviour
 {
-    // Start is called before the first frame update
-    float t = 0;
+    public Animator anim;
     public GameObject im1;
     public GameObject im2;
-    void Start()
+    public bool fading = false;
+    public int i = 0;
+
+    private void Start()
+    {
+        GameObject[] im = { im1, im2 };
+        StartCoroutine(fade(im));
+    }
+
+    void Update()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator fade(GameObject[] im)
     {
-        t += Time.deltaTime;
-        if (t > 3)
-        {
-            im1.SetActive(false);
-        }
-        if (t > 6)
-        {
-            im2.SetActive(false);
-        }
-        if(t > 10)
-        {
-            SceneManager.LoadScene("Main Menu");
-        }
+        while (fading)
+            yield return null;
+        fading = true;
+        if (i == 0)
+            yield return new WaitForSeconds(5);
+        else
+            yield return new WaitForSeconds(4);
+        anim.SetBool("fade", true);
+        yield return new WaitForSeconds(1);
+        im[i].SetActive(false);
+        anim.SetBool("fade", false);
+        yield return new WaitForSeconds(1);
+        fading = false;
+        i++;
+        if (i == im.Length)
+            StartCoroutine(end());
+        else
+            StartCoroutine(fade(im));
+    }
+
+    IEnumerator end()
+    {
+        while (fading)
+            yield return null;
+        fading = true;
+        yield return new WaitForSeconds(4);
+        anim.SetBool("fade", true);
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("Level 1");
     }
 }
