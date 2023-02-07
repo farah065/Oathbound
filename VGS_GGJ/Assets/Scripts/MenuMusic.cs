@@ -22,7 +22,8 @@ public class MenuMusic : MonoBehaviour
     }
     private void Update()
     {
-        if (SceneManager.GetActiveScene().name != "Main Menu" && SceneManager.GetActiveScene().name != "Settings")
+        if (SceneManager.GetActiveScene().name != "Main Menu" && SceneManager.GetActiveScene().name != "Settings" && 
+            SceneManager.GetActiveScene().name != "cutscene")
         {
             Destroy(this.gameObject);
         }

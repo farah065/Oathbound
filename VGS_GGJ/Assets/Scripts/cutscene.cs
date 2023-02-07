@@ -52,6 +52,7 @@ public class Cutscene : MonoBehaviour
         yield return new WaitForSeconds(4);
         anim.SetBool("fade", true);
         yield return new WaitForSeconds(1);
+        PlayerPrefs.SetInt("Cutscene", 1);
         SceneManager.LoadScene("Level 1");
     }
 }

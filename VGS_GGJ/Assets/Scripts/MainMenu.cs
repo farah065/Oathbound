@@ -66,7 +66,10 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("Level " + PlayerPrefs.GetInt("CurrentLevel", 1));
+        if (PlayerPrefs.GetInt("CurrentLevel", 1) == 1 && PlayerPrefs.GetInt("Cutscene", 0) == 0)
+            SceneManager.LoadScene("cutscene");
+        else
+            SceneManager.LoadScene("Level " + PlayerPrefs.GetInt("CurrentLevel", 1));
     }
 
     public void QuitGame()

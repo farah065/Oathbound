@@ -658,6 +658,7 @@ MonoBehaviour:
   im1: {fileID: 228543782}
   im2: {fileID: 2135003597}
   fading: 0
+  i: 0
 --- !u!1 &2135003597
 GameObject:
   m_ObjectHideFlags: 0

@@ -26,19 +26,16 @@ public class LevelTransition : MonoBehaviour
             int nextLevelNum = currLevelNum + 1;
             string nextLevel = "Level " + nextLevelNum;
             PlayerPrefs.SetInt("CurrentLevel", nextLevelNum);
-            if(currLevelNum < 6)
-                SceneManager.LoadScene(nextLevel);
-            else
-            {
-                gameComplete = 1;
-                PlayerPrefs.SetInt("CurrentLevel", 1);
-                SceneManager.LoadScene("Main Menu");
-            }
+            SceneManager.LoadScene(nextLevel);
         }
 
     }
     void OnTriggerEnter2D(Collider2D other)
     {
+        gameComplete = 1;
+        PlayerPrefs.SetInt("Cutscene", 0);
+        PlayerPrefs.SetInt("CurrentLevel", 1);
+        SceneManager.LoadScene("Main Menu");
         SceneManager.LoadScene("End Scene");
     }
 }
