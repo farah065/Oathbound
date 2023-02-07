@@ -35,7 +35,6 @@ public class LevelTransition : MonoBehaviour
         gameComplete = 1;
         PlayerPrefs.SetInt("Cutscene", 0);
         PlayerPrefs.SetInt("CurrentLevel", 1);
-        SceneManager.LoadScene("Main Menu");
         SceneManager.LoadScene("End Scene");
     }
 }
