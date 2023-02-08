@@ -13,6 +13,8 @@ public class MusicScript : MonoBehaviour
 
     public AudioSource audioSource;
     public AudioSource audioSource2;
+    public AudioSource audioSource3;
+    public AudioSource keySource;
     public AudioMixerGroup sfxMixer;
     public AudioMixerGroup musicMixer;
 
@@ -41,16 +43,13 @@ public class MusicScript : MonoBehaviour
             }
             else
             {
-                if (!sfxPlayed)
+                /*if (!sfxPlayed)
                 {
-                    audioSource.clip = keySFX;
+                    keySource.PlayOneShot(keySFX);
                     sfxPlayed = true;
                     changed = true;
-                }
-                else
-                {
-                    audioSource.clip = clips[5];
-                }
+                }*/
+                audioSource.clip = clips[5];
             }
             audioSource.Play();
         }
@@ -59,9 +58,13 @@ public class MusicScript : MonoBehaviour
         {
             audioSource.pitch = 0.5f;
             audioSource2.pitch = 0.5f;
+            audioSource3.pitch = 0.5f;
+            keySource.pitch = 0.5f;
             audioSource2.volume = 0.5f;
+            audioSource3.volume = 0.5f;
+            keySource.volume = 0.2f;
             if (!phase1)
-                audioSource.volume = 0.1f;
+                audioSource.volume = 0.08f;
             else
                 audioSource.volume = 0.5f;
         }
@@ -69,9 +72,13 @@ public class MusicScript : MonoBehaviour
         {
             audioSource.pitch = 1;
             audioSource2.pitch = 1;
-            audioSource2.volume = 1f;
+            audioSource3.pitch = 1;
+            keySource.pitch = 1;
+            audioSource2.volume = 1;
+            audioSource3.volume = 1;
+            keySource.volume = 0.4f;
             if (!phase1)
-                audioSource.volume = 0.3f;
+                audioSource.volume = 0.17f;
             else
                 audioSource.volume = 1;
         }
@@ -79,7 +86,7 @@ public class MusicScript : MonoBehaviour
         if (rootgenscript.changeMusic && !changed && PlayerPrefs.GetInt("CurrentLevel", 1) != 6)
         {
             audioSource.Stop();
-            sfxPlayed = true;
+            //sfxPlayed = true;
             phase1 = false;
             changed = true;
         }
@@ -94,9 +101,10 @@ public class MusicScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "skullkey")
         {
+            //sfxPlayed = false;
+            keySource.PlayOneShot(keySFX);
             if (phase1)
             {
-                sfxPlayed = false;
                 audioSource.Stop();
                 phase1 = false;
             }

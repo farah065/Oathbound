@@ -7,6 +7,8 @@ public class AudioFade : MonoBehaviour
     public Transform player;
     public AudioSource source;
     private Vector3 startPos;
+    private float pauseVol;
+    private bool unpaused = true;
 
     void Start()
     {
@@ -17,10 +19,24 @@ public class AudioFade : MonoBehaviour
     {
         float curDistance = Vector3.Distance(startPos, player.position);
         float factor = (1 - (curDistance / 55)) / 2;
-        Debug.Log(factor);
         if (factor > 0)
-            source.volume = factor;
+        {
+            pauseVol = factor / 2;
+        }
         else
-            source.volume = 0;
+        {
+            pauseVol = 0;
+        }
+
+        if (PauseMenu.paused)
+        {
+            source.volume = pauseVol;
+            source.pitch = 0.5f;
+        }
+        else
+        {
+            source.volume = pauseVol * 2;
+            source.pitch = 1;
+        }
     }
 }
