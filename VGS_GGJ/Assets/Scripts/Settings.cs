@@ -88,4 +88,17 @@ public class Settings : MonoBehaviour
     {
         SceneManager.LoadScene("Main Menu");
     }
+
+    public void reset()
+    {
+        PlayerPrefs.DeleteAll();
+        resolution.value = resolutions.Length - 1;
+        resolution.RefreshShownValue();
+        graphics.value = 2;
+        graphics.RefreshShownValue();
+        fullScreen.isOn = true;
+        masterVolume.value = 1;
+        musicVolume.value = 1;
+        sfxVolume.value = 1;
+    }
 }

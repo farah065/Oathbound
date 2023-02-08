@@ -19,15 +19,15 @@ public class MusicScript : MonoBehaviour
     public bool phase1;
     public bool changed = false;
 
-    public int i = 0;
+    public int i;
     void Start()
     {
-        audioSource.volume = 1;
         clips = Resources.LoadAll<AudioClip>("Audio");
-        audioSource.clip = clips[i];
-        audioSource.Play();
-        i++;
         phase1 = true;
+        if (PlayerPrefs.GetInt("CurrentLevel", 1) == 1)
+            i = 0;
+        else
+            i = PlayerPrefs.GetInt("CurrentLevel", 1) - 2;
     }
 
     void Update()
@@ -37,13 +37,7 @@ public class MusicScript : MonoBehaviour
         {
             if (phase1)
             {
-                if(i < 4)
-                {
-                    audioSource.clip = clips[i];
-                    i++;
-                }
-                else
-                    audioSource.clip = clips[4];
+                audioSource.clip = clips[i];
             }
             else
             {
@@ -55,7 +49,6 @@ public class MusicScript : MonoBehaviour
                 }
                 else
                 {
-                    //audioSource.outputAudioMixerGroup = musicMixer;
                     audioSource.clip = clips[5];
                 }
             }
@@ -83,18 +76,18 @@ public class MusicScript : MonoBehaviour
                 audioSource.volume = 1;
         }
 
-        if (rootgenscript.changeMusic && !changed)
+        if (rootgenscript.changeMusic && !changed && PlayerPrefs.GetInt("CurrentLevel", 1) != 6)
         {
             audioSource.Stop();
             sfxPlayed = true;
             phase1 = false;
             changed = true;
         }
-        if(!rootgenscript.changeMusic && changed){
+        /*if(!rootgenscript.changeMusic && changed){
             audioSource.Stop();
             phase1 = true;
             changed = false;
-        }
+        }*/
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -107,7 +100,6 @@ public class MusicScript : MonoBehaviour
                 audioSource.Stop();
                 phase1 = false;
             }
-            //audioSource.outputAudioMixerGroup = sfxMixer;
         }
     }
 }

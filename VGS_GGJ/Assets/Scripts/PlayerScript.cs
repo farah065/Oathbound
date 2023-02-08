@@ -9,8 +9,8 @@ public class PlayerScript : MonoBehaviour
 {
     public float moveSpeed = 3;
     public float jumpSpeed = 3;
-    public float ascendingSpeed = 0.1f;
-    private bool grounded = true;
+    public float ascendingSpeed = 0.001f;
+    public static bool grounded = true;
     private Rigidbody2D playerbody;
     public rootgenscript rgn;
     public dooropenscript dors;
@@ -57,6 +57,8 @@ public class PlayerScript : MonoBehaviour
         h1 = GameObject.FindGameObjectWithTag("hp1").GetComponent<Renderer>();
         h2 = GameObject.FindGameObjectWithTag("hp2").GetComponent<Renderer>();
         h3 = GameObject.FindGameObjectWithTag("hp3").GetComponent<Renderer>();
+
+        StartCoroutine(steps());
     }
 
 
@@ -70,25 +72,17 @@ public class PlayerScript : MonoBehaviour
 
         if (inElevator)
         {
-            playerbody.velocity = new Vector3(0, playerbody.velocity.y);
+            playerbody.velocity = new Vector3(0, ascendingSpeed, 0);
+            playerTR.position = new Vector3(playerTR.position.x, playerTR.position.y + ascendingSpeed);
             moving = false;
         }
 
-        if(!moving || !grounded)
-        {
-            footsteps.Stop();
-        }
         move(moveActionValue);
-        if (!footsteps.isPlaying && moving && grounded)
-        {
-            if (firststep)
-                footsteps.PlayOneShot(rightstep);
-            else
-                footsteps.PlayOneShot(leftstep);
-            firststep = !firststep;
-        }
 
-        anim.SetFloat("speed", Mathf.Abs(playerbody.velocity.x));
+        if (grounded)
+            anim.SetFloat("speed", Mathf.Abs(playerbody.velocity.x));
+        else
+            anim.SetFloat("speed", 0);
 
         if (playerbody.velocity.x > 0)
         {
@@ -108,11 +102,6 @@ public class PlayerScript : MonoBehaviour
         {
             switched = false;
             playerTR.localScale = new Vector3(playerTR.localScale.x * -1, playerTR.localScale.y, playerTR.localScale.z);
-        }
-
-        if (inElevator)
-        {
-            playerTR.position = new Vector3(playerTR.position.x, playerTR.position.y + ascendingSpeed);
         }
     }
 
@@ -138,18 +127,6 @@ public class PlayerScript : MonoBehaviour
             playerbody.velocity = new Vector2(playerbody.velocity.x, jumpSpeed);
     }
 
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.tag == "Floor")
-        {
-            grounded = true;
-        }
-    }
-    void OnCollisionExit2D(Collision2D other)
-    {
-        if(other.gameObject.tag == "Floor")
-            grounded = false;
-    }
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "explosion")
@@ -164,7 +141,6 @@ public class PlayerScript : MonoBehaviour
             dors.open = true;
             Destroy(other.gameObject);
             anim.SetBool("skull", true);
-            //keysfx.PlayOneShot(keygrab);
         }
         if (other.gameObject.tag == "door")
         {
@@ -183,11 +159,14 @@ public class PlayerScript : MonoBehaviour
     }
 
     private void killPlayer(){
-        enabled = false;
-        h1.enabled = false;
-        h2.enabled = false;
-        h3.enabled = false;
-        anim.SetBool("dead", true);
+        if (!inElevator)
+        {
+            enabled = false;
+            h1.enabled = false;
+            h2.enabled = false;
+            h3.enabled = false;
+            anim.SetBool("dead", true);
+        }
     }
     IEnumerator Jmpboost()
     {
@@ -195,6 +174,19 @@ public class PlayerScript : MonoBehaviour
         jumpSpeed *= 2;
         yield return new WaitForSeconds(5);
         jumpSpeed = tempjmp;
+    }
+
+    IEnumerator steps()
+    {
+        while (!moving || !grounded)
+            yield return null;
+        if (firststep)
+            footsteps.PlayOneShot(rightstep);
+        else
+            footsteps.PlayOneShot(leftstep);
+        yield return new WaitForSeconds(0.53f);
+        firststep = !firststep;
+        StartCoroutine(steps());
     }
 
     IEnumerator hitTaken()

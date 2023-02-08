@@ -46,7 +46,7 @@ public class MainMenu : MonoBehaviour
 
         PlayerPrefs.SetInt("Complete", LevelTransition.gameComplete);
 
-        if(PlayerPrefs.GetInt("Complete") == 1)
+        if(PlayerPrefs.GetInt("Complete", 0) == 1)
         {
             bgRen.enabled = false;
             audioSource.clip = credits;
