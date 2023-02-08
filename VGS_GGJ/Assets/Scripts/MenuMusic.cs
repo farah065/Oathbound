@@ -6,6 +6,11 @@ using UnityEngine.SceneManagement;
 public class MenuMusic : MonoBehaviour
 {
     public static MenuMusic musicPlayer;
+    public AudioSource source;
+    public AudioClip mainMusic;
+    public AudioClip completeMusic;
+    private bool changed = false;
+
     void Awake()
     {
         if (musicPlayer == null)
@@ -19,6 +24,13 @@ public class MenuMusic : MonoBehaviour
         }
 
         DontDestroyOnLoad(this.gameObject);
+
+        if (PlayerPrefs.GetInt("Complete", 0) == 1)
+        {
+            source.clip = completeMusic;
+            source.Play();
+            changed = false;
+        }
     }
     private void Update()
     {
@@ -26,6 +38,14 @@ public class MenuMusic : MonoBehaviour
             SceneManager.GetActiveScene().name != "cutscene")
         {
             Destroy(this.gameObject);
+        }
+
+        if (PlayerPrefs.GetInt("Complete", 0) == 0 && !changed)
+        {
+            source.Stop();
+            source.clip = mainMusic;
+            source.Play();
+            changed = true;
         }
     }
 }

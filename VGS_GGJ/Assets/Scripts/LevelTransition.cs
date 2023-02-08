@@ -33,6 +33,7 @@ public class LevelTransition : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         gameComplete = 1;
+        PlayerPrefs.SetInt("Complete", 1);
         PlayerPrefs.SetInt("Cutscene", 0);
         PlayerPrefs.SetInt("CurrentLevel", 1);
         SceneManager.LoadScene("End Scene");

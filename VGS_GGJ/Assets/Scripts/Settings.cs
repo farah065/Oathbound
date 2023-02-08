@@ -100,5 +100,7 @@ public class Settings : MonoBehaviour
         masterVolume.value = 1;
         musicVolume.value = 1;
         sfxVolume.value = 1;
+        LevelTransition.gameComplete = 0;
+        PlayerPrefs.SetInt("Complete", 0);
     }
 }

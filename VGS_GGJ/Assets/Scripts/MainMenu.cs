@@ -8,11 +8,12 @@ using UnityEngine.EventSystems;
 
 public class MainMenu : MonoBehaviour
 {
-    public AudioMixer master;
     public Renderer bgRen;
     public AudioSource audioSource;
+    public AudioClip mainMusic;
     public AudioClip credits;
 
+    public AudioMixer master;
     Resolution[] resolutions;
     public static int currentResolutionIndex = 0;
     EventSystem eventSystem;
@@ -44,14 +45,21 @@ public class MainMenu : MonoBehaviour
         master.SetFloat("MusicVolume", Mathf.Log10(PlayerPrefs.GetFloat("MusicVolume", 1)) * 20);
         master.SetFloat("sfxVolume", Mathf.Log10(PlayerPrefs.GetFloat("sfxVolume", 1)) * 20);
 
-        PlayerPrefs.SetInt("Complete", LevelTransition.gameComplete);
+        //PlayerPrefs.SetInt("Complete", LevelTransition.gameComplete);
 
         if(PlayerPrefs.GetInt("Complete", 0) == 1)
         {
             bgRen.enabled = false;
-            audioSource.clip = credits;
-            audioSource.Play();
+            //audioSource.clip = credits;
+            //audioSource.Play();
         }
+        else
+        {
+            bgRen.enabled = true;
+            //audioSource.clip = mainMusic;
+            //audioSource.Play();
+        }
+
         mainMenuUI = gameObject.transform.Find("MainMenu").gameObject;
         controlsMenuUI = gameObject.transform.Find("Controls Menu").gameObject;
         firstSelectedMainMenu = mainMenuUI.transform.Find("Play Game").gameObject;

@@ -1063,6 +1063,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e4178e6aa2e83543afd411c90729e8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  source: {fileID: 396561042}
+  mainMusic: {fileID: 8300000, guid: fb6bb0f6513012548b01ed04a3d0d7db, type: 3}
+  completeMusic: {fileID: 8300000, guid: ca1d20e890468db43b91a87cbe59951f, type: 3}
 --- !u!1 &416288596
 GameObject:
   m_ObjectHideFlags: 0
@@ -2563,10 +2566,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05aae19191751944cad2b3e30c36ba6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  master: {fileID: 24100000, guid: 8f2b8e771691ff94bbc0b9f7bc458336, type: 2}
   bgRen: {fileID: 364045452}
   audioSource: {fileID: 396561042}
+  mainMusic: {fileID: 8300000, guid: fb6bb0f6513012548b01ed04a3d0d7db, type: 3}
   credits: {fileID: 8300000, guid: ca1d20e890468db43b91a87cbe59951f, type: 3}
+  master: {fileID: 24100000, guid: 8f2b8e771691ff94bbc0b9f7bc458336, type: 2}
 --- !u!114 &1597864715
 MonoBehaviour:
   m_ObjectHideFlags: 0
