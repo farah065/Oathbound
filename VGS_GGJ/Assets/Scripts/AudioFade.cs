@@ -18,7 +18,7 @@ public class AudioFade : MonoBehaviour
     void Update()
     {
         float curDistance = Vector3.Distance(startPos, player.position);
-        float factor = (1 - (curDistance / 55)) / 2;
+        float factor = (1 - (curDistance / 55)) / 1.5f;
         if (factor > 0)
         {
             pauseVol = factor / 2;
