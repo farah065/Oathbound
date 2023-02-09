@@ -178,7 +178,7 @@ public class PlayerScript : MonoBehaviour
 
     IEnumerator steps()
     {
-        while (!moving || !grounded)
+        while (!moving || !grounded || !enabled)
             yield return null;
         if (firststep)
             footsteps.PlayOneShot(rightstep);
