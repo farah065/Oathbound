@@ -10,19 +10,20 @@ GameObject:
   m_Component:
   - component: {fileID: 746464676714831018}
   - component: {fileID: 746464676714831021}
+  - component: {fileID: 1267055493815706943}
+  - component: {fileID: 8386477696707037201}
   - component: {fileID: 746464676714831023}
   - component: {fileID: 746464676714831022}
   - component: {fileID: 7954858405786661734}
   - component: {fileID: 8350001155601811009}
+  - component: {fileID: 9069435458416036586}
   - component: {fileID: 8009792423046474626}
   - component: {fileID: 1786984774104192927}
   - component: {fileID: -1598334722531688882}
   - component: {fileID: 7866413829209850832}
-  - component: {fileID: 9069435458416036586}
-  - component: {fileID: 8386477696707037201}
-  - component: {fileID: 1267055493815706943}
   - component: {fileID: 2014221144989247676}
   - component: {fileID: 3029017520381234594}
+  - component: {fileID: 935890649837016218}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -98,6 +99,68 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1267055493815706943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746464676714830993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 2a29c7a3b352b0641a9c7bcf801aef06, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ec9f3bdf-bd0e-4747-bcc5-9af928da0d2e
+    m_ActionName: PlayerMovement/Jump[/Keyboard/space,/Keyboard/w,/Keyboard/upArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7cf21650-b44e-4526-9ae8-b38771dc093e
+    m_ActionName: PlayerMovement/Move[/Keyboard/a,/Keyboard/d,/Keyboard/leftArrow,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2ca8cce5-61eb-4d13-871c-e653f5ec1aad
+    m_ActionName: PauseMenu/Pause[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 43fe1997-de3c-4528-872d-92e43b8727cc
+    m_ActionName: PauseMenu/Restart[/Keyboard/r]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: PlayerMovement
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!70 &8386477696707037201
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746464676714830993}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.007624626, y: -0.030498505}
+  m_Size: {x: 0.6547804, y: 1.8590031}
+  m_Direction: 0
 --- !u!50 &746464676714831023
 Rigidbody2D:
   serializedVersion: 4
@@ -137,9 +200,15 @@ MonoBehaviour:
   rgn: {fileID: 7954858405786661734}
   dors: {fileID: 5699139170852823692, guid: 0517fade41ff3a7419d792b87eafbfed, type: 3}
   footsteps: {fileID: -1598334722531688882}
+  jumpSFX: {fileID: 935890649837016218}
   keysfx: {fileID: -1598334722531688882}
   rightstep: {fileID: 8300000, guid: 80549e604973da6468f8b33c9eae4689, type: 3}
   leftstep: {fileID: 8300000, guid: 93796243ffb3aa44ab70c5cb4ba75db4, type: 3}
+  jump1: {fileID: 8300000, guid: 484714a7edda7164487d93e2401bf261, type: 3}
+  jump2: {fileID: 8300000, guid: 573a3cc1cd545fe4692f9c3dc742832b, type: 3}
+  jump3: {fileID: 8300000, guid: 368e383903be9124a8e8739475880fa6, type: 3}
+  jumpClips: []
+  jumpLand: {fileID: 8300000, guid: c5ed87b6011f68742b581fa667bd2059, type: 3}
   keygrab: {fileID: 8300000, guid: 4a3c3072faed86641b2c545a125f06a6, type: 3}
   hp: 3
   playerRen: {fileID: 0}
@@ -183,6 +252,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slowRate: 0.4
   duration: 2
+--- !u!114 &9069435458416036586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746464676714830993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eaac72931f432747b911636236cb667, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips: []
+  keySFX: {fileID: 8300000, guid: 09da14d1680dd4746b76fdcf0b514fe3, type: 3}
+  playing: 0
+  sfxPlayed: 0
+  audioSource: {fileID: 1786984774104192927}
+  audioSource2: {fileID: 7866413829209850832}
+  audioSource3: {fileID: 2014221144989247676}
+  keySource: {fileID: 3029017520381234594}
+  sfxMixer: {fileID: -1738650314484988452, guid: 8f2b8e771691ff94bbc0b9f7bc458336, type: 2}
+  musicMixer: {fileID: -4456513594453193818, guid: 8f2b8e771691ff94bbc0b9f7bc458336, type: 2}
+  phase1: 0
+  changed: 0
+  i: 0
 --- !u!95 &8009792423046474626
 Animator:
   serializedVersion: 5
@@ -491,93 +585,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &9069435458416036586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 746464676714830993}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1eaac72931f432747b911636236cb667, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clips: []
-  keySFX: {fileID: 8300000, guid: 09da14d1680dd4746b76fdcf0b514fe3, type: 3}
-  playing: 0
-  sfxPlayed: 0
-  audioSource: {fileID: 1786984774104192927}
-  audioSource2: {fileID: 7866413829209850832}
-  audioSource3: {fileID: 2014221144989247676}
-  keySource: {fileID: 3029017520381234594}
-  sfxMixer: {fileID: -1738650314484988452, guid: 8f2b8e771691ff94bbc0b9f7bc458336, type: 2}
-  musicMixer: {fileID: -4456513594453193818, guid: 8f2b8e771691ff94bbc0b9f7bc458336, type: 2}
-  phase1: 0
-  changed: 0
-  i: 0
---- !u!70 &8386477696707037201
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 746464676714830993}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.007624626, y: -0.030498505}
-  m_Size: {x: 0.6547804, y: 1.8590031}
-  m_Direction: 0
---- !u!114 &1267055493815706943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 746464676714830993}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 2a29c7a3b352b0641a9c7bcf801aef06, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: ec9f3bdf-bd0e-4747-bcc5-9af928da0d2e
-    m_ActionName: PlayerMovement/Jump[/Keyboard/space,/Keyboard/w,/Keyboard/upArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 7cf21650-b44e-4526-9ae8-b38771dc093e
-    m_ActionName: PlayerMovement/Move[/Keyboard/a,/Keyboard/d,/Keyboard/leftArrow,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 2ca8cce5-61eb-4d13-871c-e653f5ec1aad
-    m_ActionName: PauseMenu/Pause[/Keyboard/escape]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 43fe1997-de3c-4528-872d-92e43b8727cc
-    m_ActionName: PauseMenu/Restart[/Keyboard/r]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: PlayerMovement
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!82 &2014221144989247676
 AudioSource:
   m_ObjectHideFlags: 0
@@ -687,6 +694,102 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &935890649837016218
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746464676714830993}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -1738650314484988452, guid: 8f2b8e771691ff94bbc0b9f7bc458336, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0

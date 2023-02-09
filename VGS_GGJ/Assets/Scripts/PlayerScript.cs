@@ -15,11 +15,18 @@ public class PlayerScript : MonoBehaviour
     public rootgenscript rgn;
     public dooropenscript dors;
     public AudioSource footsteps;
+    public AudioSource jumpSFX;
     public AudioSource keysfx;
     public AudioClip rightstep;
     public AudioClip leftstep;
+    public AudioClip jump1;
+    public AudioClip jump2;
+    public AudioClip jump3;
+    public AudioClip[] jumpClips;
+    public AudioClip jumpLand;
     public AudioClip keygrab;
     bool firststep = true;
+    bool jumped = false;
     bool moving = false;
 
     public int hp = 3;
@@ -58,6 +65,8 @@ public class PlayerScript : MonoBehaviour
         h2 = GameObject.FindGameObjectWithTag("hp2").GetComponent<Renderer>();
         h3 = GameObject.FindGameObjectWithTag("hp3").GetComponent<Renderer>();
 
+        jumpClips = new AudioClip[] { jump1, jump2, jump3 };
+
         StartCoroutine(steps());
     }
 
@@ -80,9 +89,36 @@ public class PlayerScript : MonoBehaviour
         move(moveActionValue);
 
         if (grounded)
+        {
             anim.SetFloat("speed", Mathf.Abs(playerbody.velocity.x));
+            anim.SetBool("jumpDown", false);
+            anim.SetBool("jumpUp", false);
+            if (jumped)
+            {
+                jumped = false;
+                jumpSFX.PlayOneShot(jumpLand);
+            }
+        }
         else
+        {
             anim.SetFloat("speed", 0);
+            if (playerbody.velocity.y > 0)
+            {
+                anim.SetBool("jumpUp", true);
+                int r = Random.Range(0, 2);
+                if (!jumped)
+                {
+                    jumpSFX.PlayOneShot(jumpClips[r]);
+                    jumped = true;
+                }
+            }
+            else
+            {
+                anim.SetBool("jumpUp", false);
+                anim.SetBool("jumpDown", true);
+                jumped = true;
+            }
+        }
 
         if (playerbody.velocity.x > 0)
         {

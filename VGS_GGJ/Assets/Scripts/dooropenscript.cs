@@ -11,7 +11,10 @@ public class dooropenscript : MonoBehaviour
     public float speed = 0;
     private Transform elevatorTR;
     Animator anim;
-    // Start is called before the first frame update
+    public AudioSource source;
+    public AudioClip elevatorSFX;
+    bool played = false;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -37,6 +40,11 @@ public class dooropenscript : MonoBehaviour
         if (engaged)
         {
             elevatorTR.position = new Vector3(elevatorTR.position.x, elevatorTR.position.y + ascendingSpeed);
+            if (!source.isPlaying && !played)
+            {
+                source.PlayOneShot(elevatorSFX);
+                played = true;
+            }
         }
     }
     IEnumerator closeopen()

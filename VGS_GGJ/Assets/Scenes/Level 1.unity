@@ -2672,6 +2672,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: elevatorwithchains
       objectReference: {fileID: 0}
+    - target: {fileID: 3705603438809818653, guid: b92bfb1bf6566eb4e9a9c72f5c4ffbbc, type: 3}
+      propertyPath: m_Volume
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705603438809818653, guid: b92bfb1bf6566eb4e9a9c72f5c4ffbbc, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705603438809818653, guid: b92bfb1bf6566eb4e9a9c72f5c4ffbbc, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b92bfb1bf6566eb4e9a9c72f5c4ffbbc, type: 3}
 --- !u!1001 &1575749768
@@ -3100,6 +3112,10 @@ PrefabInstance:
       propertyPath: keysfx
       value: 
       objectReference: {fileID: 2070312041}
+    - target: {fileID: 746464676714831022, guid: 1545a5e5115aaee499485e82cd0f9171, type: 3}
+      propertyPath: jumpLand
+      value: 
+      objectReference: {fileID: 8300000, guid: f3bf81c4346db4b44a6dcfd22c7adf5b, type: 3}
     - target: {fileID: 746464676714831022, guid: 1545a5e5115aaee499485e82cd0f9171, type: 3}
       propertyPath: footsteps
       value: 
