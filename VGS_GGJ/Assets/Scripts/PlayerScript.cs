@@ -96,6 +96,7 @@ public class PlayerScript : MonoBehaviour
             if (jumped)
             {
                 jumped = false;
+                jumpSFX.volume = 0.4f;
                 jumpSFX.PlayOneShot(jumpLand);
             }
         }
@@ -108,6 +109,7 @@ public class PlayerScript : MonoBehaviour
                 int r = Random.Range(0, 2);
                 if (!jumped)
                 {
+                    jumpSFX.volume = 0.6f;
                     jumpSFX.PlayOneShot(jumpClips[r]);
                     jumped = true;
                 }
