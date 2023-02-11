@@ -48,6 +48,17 @@
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "",
+                    "id": "ecd28617-061b-4868-9e7c-25be5a0181be",
+                    "path": "<Touchscreen>/primaryTouch/tap",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "Keyboard",
                     "id": "4efa4796-878a-46e4-8e6b-72c55707b778",
                     "path": "1DAxis",
@@ -112,6 +123,39 @@
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "TouchScreen",
+                    "id": "86029334-8285-4b88-b406-09d3c5d099ea",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "26adc9e8-a9a1-40a3-acf8-d40fee5bd80c",
+                    "path": "<Touchscreen>/primaryTouch/delta/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "704f0c43-7c8d-4701-ac19-56be9cd833a2",
+                    "path": "<Touchscreen>/primaryTouch/delta/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         },
@@ -163,6 +207,17 @@
                 },
                 {
                     "name": "",
+                    "id": "f5876763-a142-458c-8a6b-3bcb383a2286",
+                    "path": "<Touchscreen>/touch0/tap",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "5f04c662-16ab-4fd0-bd64-e3a327156c17",
                     "path": "<Keyboard>/r",
                     "interactions": "",
@@ -177,6 +232,17 @@
                     "id": "51ef08f0-92ec-4f44-bc14-4a7d8649ea54",
                     "path": "<Gamepad>/start",
                     "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Restart",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5065fc0d-c46b-433d-8fbc-ffeb9e3cbfbc",
+                    "path": "<Touchscreen>/primaryTouch/tap",
+                    "interactions": "MultiTap(tapCount=3)",
                     "processors": "",
                     "groups": "",
                     "action": "Restart",

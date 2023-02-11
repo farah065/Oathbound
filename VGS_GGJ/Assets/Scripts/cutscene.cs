@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Cutscene : MonoBehaviour
+public class cutscene : MonoBehaviour
 {
     public Animator anim;
     public GameObject im1;
