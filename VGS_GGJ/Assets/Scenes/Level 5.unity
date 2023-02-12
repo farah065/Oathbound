@@ -852,7 +852,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6363388884693615491, guid: 09fa6ee1c686e23448263e6bb36c0d2e, type: 3}
       propertyPath: percdamp
-      value: 0.05
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09fa6ee1c686e23448263e6bb36c0d2e, type: 3}
